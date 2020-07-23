@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JewelStickerDataSet" targetNamespace="http://tempuri.org/JewelStickerDataSet.xsd" xmlns:mstns="http://tempuri.org/JewelStickerDataSet.xsd" xmlns="http://tempuri.org/JewelStickerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JewelStickerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="JewelStickerDataSet" msprop:Generator_UserDSName="JewelStickerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JewelSticker" msprop:Generator_TableClassName="JewelStickerDataTable" msprop:Generator_TableVarName="tableJewelSticker" msprop:Generator_TablePropName="JewelSticker" msprop:Generator_RowDeletingName="JewelStickerRowDeleting" msprop:Generator_UserTableName="JewelSticker" msprop:Generator_RowChangingName="JewelStickerRowChanging" msprop:Generator_RowEvHandlerName="JewelStickerRowChangeEventHandler" msprop:Generator_RowDeletedName="JewelStickerRowDeleted" msprop:Generator_RowEvArgName="JewelStickerRowChangeEvent" msprop:Generator_RowChangedName="JewelStickerRowChanged" msprop:Generator_RowClassName="JewelStickerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JewelNumber" msprop:Generator_ColumnVarNameInTable="columnJewelNumber" msprop:Generator_ColumnPropNameInRow="JewelNumber" msprop:Generator_ColumnPropNameInTable="JewelNumberColumn" msprop:Generator_UserColumnName="JewelNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesignCode" msprop:Generator_ColumnVarNameInTable="columnDesignCode" msprop:Generator_ColumnPropNameInRow="DesignCode" msprop:Generator_ColumnPropNameInTable="DesignCodeColumn" msprop:Generator_UserColumnName="DesignCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetWeight" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_UserColumnName="NetWeight" type="xs:decimal" />
+              <xs:element name="GrossWeight" msprop:Generator_ColumnVarNameInTable="columnGrossWeight" msprop:Generator_ColumnPropNameInRow="GrossWeight" msprop:Generator_ColumnPropNameInTable="GrossWeightColumn" msprop:Generator_UserColumnName="GrossWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="StoneWeight" msprop:Generator_ColumnVarNameInTable="columnStoneWeight" msprop:Generator_ColumnPropNameInRow="StoneWeight" msprop:Generator_ColumnPropNameInTable="StoneWeightColumn" msprop:Generator_UserColumnName="StoneWeight" type="xs:decimal" />
+              <xs:element name="StonePcs" msprop:Generator_ColumnVarNameInTable="columnStonePcs" msprop:Generator_ColumnPropNameInRow="StonePcs" msprop:Generator_ColumnPropNameInTable="StonePcsColumn" msprop:Generator_UserColumnName="StonePcs" type="xs:int" />
+              <xs:element name="JewelImage" msprop:Generator_ColumnVarNameInTable="columnJewelImage" msprop:Generator_ColumnPropNameInRow="JewelImage" msprop:Generator_ColumnPropNameInTable="JewelImageColumn" msprop:Generator_UserColumnName="JewelImage" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,8 @@
+Team Viewer(Tirth Jewel)
+Partener ID=> 526373201
+Password=> h3sn93
+
+Back up:
+Right click on DB and goto 'Tasks' select 'Back up' add path for storing .bak file and click 'Ok'
+Restore
+Right click on DB and goto 'Tasks' select 'Restore' and

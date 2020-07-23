@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77FB2ED1-B6BE-4425-8B29-51E8565E84EC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>JetCoders.Forms.UI</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JetCoders.Forms.UI</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>http://localhost/Femiani.Forms.UI/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NLog2.netfx40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\PopupControl\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="system.design">
+      <Name>system.design</Name>
+    </Reference>
+    <Reference Include="system.drawing">
+      <Name>system.drawing</Name>
+    </Reference>
+    <Reference Include="system.windows.forms">
+      <Name>system.windows.forms</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormControls\BaseFormControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControls\JewelHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimplePopup\FeedBackPopupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimplePopup\FeedBackPopupControl.Designer.cs">
+      <DependentUpon>FeedBackPopupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimplePopup\CustomToolTip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimplePopup\CustomToolTip.Designer.cs">
+      <DependentUpon>CustomToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextBox\AutoCompleteEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\AutoCompleteEntryCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBox\AutoCompleteTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\AutoCompleteTriggerCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\CoolTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBox\IAutoCompleteEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\ShortCutTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\TextLengthTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextBox\TriggerState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\BarcodeUtility.cs" />
+    <Compile Include="Utilities\Code128Content.cs" />
+    <Compile Include="Utilities\Code128Rendering.cs" />
+    <Compile Include="Utilities\CostingUtility.cs" />
+    <Compile Include="Utilities\FormExtension.cs" />
+    <Compile Include="Utilities\GridExtension.cs" />
+    <Compile Include="Win32\Messages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimplePopup\FeedBackPopupControl.resx">
+      <DependentUpon>FeedBackPopupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimplePopup\CustomToolTip.resx">
+      <DependentUpon>CustomToolTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBox\AutoCompleteTextBox.resx">
+      <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBox\CoolTextBox.resx">
+      <DependentUpon>CoolTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JewelInventory\Connections\Connections.csproj">
+      <Project>{81C613A3-F484-4BB7-9EB2-AA4614A95B0B}</Project>
+      <Name>Connections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JetCoders.Shared\JetCoders.Shared.csproj">
+      <Project>{5A0817EA-EC4A-43BC-B510-FF58CD49AEE4}</Project>
+      <Name>JetCoders.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TirthJewels.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

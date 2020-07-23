@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CostingChartDataSet" targetNamespace="http://tempuri.org/CostingChartDataSet.xsd" xmlns:mstns="http://tempuri.org/CostingChartDataSet.xsd" xmlns="http://tempuri.org/CostingChartDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CostingChartDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CostingChartDataSet" msprop:Generator_UserDSName="CostingChartDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Costing" msprop:Generator_TableClassName="CostingDataTable" msprop:Generator_TableVarName="tableCosting" msprop:Generator_TablePropName="Costing" msprop:Generator_RowDeletingName="CostingRowDeleting" msprop:Generator_UserTableName="Costing" msprop:Generator_RowChangingName="CostingRowChanging" msprop:Generator_RowEvHandlerName="CostingRowChangeEventHandler" msprop:Generator_RowDeletedName="CostingRowDeleted" msprop:Generator_RowEvArgName="CostingRowChangeEvent" msprop:Generator_RowChangedName="CostingRowChanged" msprop:Generator_RowClassName="CostingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRID" msprop:Generator_ColumnVarNameInTable="columnTRID" msprop:Generator_ColumnPropNameInRow="TRID" msprop:Generator_ColumnPropNameInTable="TRIDColumn" msprop:Generator_UserColumnName="TRID" type="xs:int" minOccurs="0" />
+              <xs:element name="CERNO" msprop:Generator_ColumnVarNameInTable="columnCERNO" msprop:Generator_ColumnPropNameInRow="CERNO" msprop:Generator_ColumnPropNameInTable="CERNOColumn" msprop:Generator_UserColumnName="CERNO" type="xs:string" minOccurs="0" />
+              <xs:element name="DESIGNNO" msprop:Generator_ColumnVarNameInTable="columnDESIGNNO" msprop:Generator_ColumnPropNameInRow="DESIGNNO" msprop:Generator_ColumnPropNameInTable="DESIGNNOColumn" msprop:Generator_UserColumnName="DESIGNNO" type="xs:string" minOccurs="0" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="GRWT" msprop:Generator_ColumnVarNameInTable="columnGRWT" msprop:Generator_ColumnPropNameInRow="GRWT" msprop:Generator_ColumnPropNameInTable="GRWTColumn" msprop:Generator_UserColumnName="GRWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NTWT" msprop:Generator_ColumnVarNameInTable="columnNTWT" msprop:Generator_ColumnPropNameInRow="NTWT" msprop:Generator_ColumnPropNameInTable="NTWTColumn" msprop:Generator_UserColumnName="NTWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GAMT" msprop:Generator_ColumnVarNameInTable="columnGAMT" msprop:Generator_ColumnPropNameInRow="GAMT" msprop:Generator_ColumnPropNameInTable="GAMTColumn" msprop:Generator_UserColumnName="GAMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COLOR" msprop:Generator_ColumnVarNameInTable="columnCOLOR" msprop:Generator_ColumnPropNameInRow="COLOR" msprop:Generator_ColumnPropNameInTable="COLORColumn" msprop:Generator_UserColumnName="COLOR" type="xs:string" minOccurs="0" />
+              <xs:element name="DIAPCS" msprop:Generator_ColumnVarNameInTable="columnDIAPCS" msprop:Generator_ColumnPropNameInRow="DIAPCS" msprop:Generator_ColumnPropNameInTable="DIAPCSColumn" msprop:Generator_UserColumnName="DIAPCS" type="xs:int" minOccurs="0" />
+              <xs:element name="DIAWT" msprop:Generator_ColumnVarNameInTable="columnDIAWT" msprop:Generator_ColumnPropNameInRow="DIAWT" msprop:Generator_ColumnPropNameInTable="DIAWTColumn" msprop:Generator_UserColumnName="DIAWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIATYPE" msprop:Generator_ColumnVarNameInTable="columnDIATYPE" msprop:Generator_ColumnPropNameInRow="DIATYPE" msprop:Generator_ColumnPropNameInTable="DIATYPEColumn" msprop:Generator_UserColumnName="DIATYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="SIEVSZ" msprop:Generator_ColumnVarNameInTable="columnSIEVSZ" msprop:Generator_ColumnPropNameInRow="SIEVSZ" msprop:Generator_ColumnPropNameInTable="SIEVSZColumn" msprop:Generator_UserColumnName="SIEVSZ" type="xs:string" minOccurs="0" />
+              <xs:element name="DPCS" msprop:Generator_ColumnVarNameInTable="columnDPCS" msprop:Generator_ColumnPropNameInRow="DPCS" msprop:Generator_ColumnPropNameInTable="DPCSColumn" msprop:Generator_UserColumnName="DPCS" type="xs:int" minOccurs="0" />
+              <xs:element name="DWT" msprop:Generator_ColumnVarNameInTable="columnDWT" msprop:Generator_ColumnPropNameInRow="DWT" msprop:Generator_ColumnPropNameInTable="DWTColumn" msprop:Generator_UserColumnName="DWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DPR" msprop:Generator_ColumnVarNameInTable="columnDPR" msprop:Generator_ColumnPropNameInRow="DPR" msprop:Generator_ColumnPropNameInTable="DPRColumn" msprop:Generator_UserColumnName="DPR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CPCS" msprop:Generator_ColumnVarNameInTable="columnCPCS" msprop:Generator_ColumnPropNameInRow="CPCS" msprop:Generator_ColumnPropNameInTable="CPCSColumn" msprop:Generator_UserColumnName="CPCS" type="xs:int" minOccurs="0" />
+              <xs:element name="CWT" msprop:Generator_ColumnVarNameInTable="columnCWT" msprop:Generator_ColumnPropNameInRow="CWT" msprop:Generator_ColumnPropNameInTable="CWTColumn" msprop:Generator_UserColumnName="CWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STONEVAL" msprop:Generator_ColumnVarNameInTable="columnSTONEVAL" msprop:Generator_ColumnPropNameInRow="STONEVAL" msprop:Generator_ColumnPropNameInTable="STONEVALColumn" msprop:Generator_UserColumnName="STONEVAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LABR" msprop:Generator_ColumnVarNameInTable="columnLABR" msprop:Generator_ColumnPropNameInRow="LABR" msprop:Generator_ColumnPropNameInTable="LABRColumn" msprop:Generator_UserColumnName="LABR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CERT" msprop:Generator_ColumnVarNameInTable="columnCERT" msprop:Generator_ColumnPropNameInRow="CERT" msprop:Generator_ColumnPropNameInTable="CERTColumn" msprop:Generator_UserColumnName="CERT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STAMP" msprop:Generator_ColumnVarNameInTable="columnSTAMP" msprop:Generator_ColumnPropNameInRow="STAMP" msprop:Generator_ColumnPropNameInTable="STAMPColumn" msprop:Generator_UserColumnName="STAMP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMT" msprop:Generator_ColumnVarNameInTable="columnAMT" msprop:Generator_ColumnPropNameInRow="AMT" msprop:Generator_ColumnPropNameInTable="AMTColumn" msprop:Generator_UserColumnName="AMT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StoneDetails" msprop:Generator_TableClassName="StoneDetailsDataTable" msprop:Generator_TableVarName="tableStoneDetails" msprop:Generator_TablePropName="StoneDetails" msprop:Generator_RowDeletingName="StoneDetailsRowDeleting" msprop:Generator_UserTableName="StoneDetails" msprop:Generator_RowChangingName="StoneDetailsRowChanging" msprop:Generator_RowEvHandlerName="StoneDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="StoneDetailsRowDeleted" msprop:Generator_RowEvArgName="StoneDetailsRowChangeEvent" msprop:Generator_RowChangedName="StoneDetailsRowChanged" msprop:Generator_RowClassName="StoneDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TRID" msprop:Generator_ColumnVarNameInTable="columnTRID" msprop:Generator_ColumnPropNameInRow="TRID" msprop:Generator_ColumnPropNameInTable="TRIDColumn" msprop:Generator_UserColumnName="TRID" type="xs:int" minOccurs="0" />
+              <xs:element name="SIEVSZ" msprop:Generator_ColumnVarNameInTable="columnSIEVSZ" msprop:Generator_ColumnPropNameInRow="SIEVSZ" msprop:Generator_ColumnPropNameInTable="SIEVSZColumn" msprop:Generator_UserColumnName="SIEVSZ" type="xs:string" minOccurs="0" />
+              <xs:element name="DIAPCS" msprop:Generator_ColumnVarNameInTable="columnDIAPCS" msprop:Generator_ColumnPropNameInRow="DIAPCS" msprop:Generator_ColumnPropNameInTable="DIAPCSColumn" msprop:Generator_UserColumnName="DIAPCS" type="xs:string" minOccurs="0" />
+              <xs:element name="DIAWT" msprop:Generator_ColumnVarNameInTable="columnDIAWT" msprop:Generator_ColumnPropNameInRow="DIAWT" msprop:Generator_ColumnPropNameInTable="DIAWTColumn" msprop:Generator_UserColumnName="DIAWT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIAPR" msprop:Generator_ColumnVarNameInTable="columnDIAPR" msprop:Generator_ColumnPropNameInRow="DIAPR" msprop:Generator_ColumnPropNameInTable="DIAPRColumn" msprop:Generator_UserColumnName="DIAPR" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81C613A3-F484-4BB7-9EB2-AA4614A95B0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Connections</RootNamespace>
+    <AssemblyName>Connections</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog">
+      <HintPath>..\..\Lib\NLog2.netfx40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SpellNumber">
+      <HintPath>..\..\Lib\SpellNumber\SpellNumber.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dataset\ConfigurationDataSet.Designer.cs">
+      <DependentUpon>ConfigurationDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CreditNoteDataSet.cs">
+      <DependentUpon>CreditNoteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CreditNoteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditNoteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CreditNote.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LooseDiamondLookup.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Partial\Address.cs" />
+    <Compile Include="Entities\Partial\Customer.cs" />
+    <Compile Include="Entities\Partial\FinancialYearMaster.cs" />
+    <Compile Include="Entities\Partial\JewelStockLedger.cs" />
+    <Compile Include="Entities\Partial\Supplier.cs" />
+    <Compile Include="Entities\Partial\TransactionInvoice.cs" />
+    <Compile Include="Entities\Partial\TransactionLookup.cs" />
+    <Compile Include="Entities\Partial\User.cs" />
+    <Compile Include="Requests\CreditNoteRequest.cs" />
+    <Compile Include="Responses\CreditNoteResponse.cs" />
+    <Compile Include="StaticMembers\LocalStore.cs" />
+    <Compile Include="Enums\AuthType.cs" />
+    <Compile Include="Objects\CatalogueData.cs" />
+    <Compile Include="Objects\CertificateRates.cs" />
+    <Compile Include="Objects\ColorStoneDetail.cs" />
+    <Compile Include="Objects\CostingDetails.cs" />
+    <Compile Include="Enums\CustomesStatus.cs" />
+    <Compile Include="Enums\FormMode.cs" />
+    <Compile Include="Enums\ItemCategory.cs" />
+    <Compile Include="Objects\JewelItemCategory.cs" />
+    <Compile Include="Enums\JewelState.cs" />
+    <Compile Include="Objects\MetalDetail.cs" />
+    <Compile Include="Enums\OwnerType.cs" />
+    <Compile Include="Enums\ProductCategory.cs" />
+    <Compile Include="Enums\ReportType.cs" />
+    <Compile Include="Enums\StockStatus.cs" />
+    <Compile Include="Objects\StoneChart.cs" />
+    <Compile Include="Objects\StoneDetail.cs" />
+    <Compile Include="Objects\StoneMetaDetail.cs" />
+    <Compile Include="Enums\SupplierStatus.cs" />
+    <Compile Include="Enums\TransactionType.cs" />
+    <Compile Include="Enums\UserStatus.cs" />
+    <Compile Include="Enums\UserType.cs" />
+    <Compile Include="Interfaces\ICatalogueService.cs" />
+    <Compile Include="Interfaces\IConnectionServices.cs" />
+    <Compile Include="Interfaces\IDataSetProvider.cs" />
+    <Compile Include="Interfaces\IExcelExporter.cs" />
+    <Compile Include="Interfaces\IWinSettingProvider.cs" />
+    <Compile Include="Responses\CalculateResponse.cs" />
+    <Compile Include="Services\JewelCalculation.cs" />
+    <Compile Include="Dataset\ConfigurationDataSet.cs">
+      <DependentUpon>ConfigurationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CostingChartDataSet.cs">
+      <DependentUpon>CostingChartDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CostingChartDataSet.Designer.cs">
+      <DependentUpon>CostingChartDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerDataSet.cs">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerDataSet.Designer.cs">
+      <DependentUpon>CustomerDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FirmMasterDataSet.cs">
+      <DependentUpon>FirmMasterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\FirmMasterDataSet.Designer.cs">
+      <DependentUpon>FirmMasterDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelMasterDataSet.cs">
+      <DependentUpon>JewelMasterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelMasterDataSet.Designer.cs">
+      <DependentUpon>JewelMasterDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelStickerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JewelStickerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelStockDataSet.cs">
+      <DependentUpon>JewelStockDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelStockDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JewelStockDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelTagDataSet.cs">
+      <DependentUpon>JewelTagDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelTagDataSet.Designer.cs">
+      <DependentUpon>JewelTagDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelTransactionsDataSet.cs">
+      <DependentUpon>JewelTransactionsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JewelTransactionsDataSet.Designer.cs">
+      <DependentUpon>JewelTransactionsDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\LooseDiamondDataSet.cs">
+      <DependentUpon>LooseDiamondDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\LooseDiamondDataSet.Designer.cs">
+      <DependentUpon>LooseDiamondDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\OrderDataSet.cs">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\OrderDataSet.Designer.cs">
+      <DependentUpon>OrderDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\SupplierDataSet.cs">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\SupplierDataSet.Designer.cs">
+      <DependentUpon>SupplierDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TaxInvoiceDetailDataSet.cs">
+      <DependentUpon>TaxInvoiceDetailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TaxInvoiceDetailDataSet.Designer.cs">
+      <DependentUpon>TaxInvoiceDetailDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Dataset\TaxInvoiceSummaryDataSet.cs">
+      <DependentUpon>TaxInvoiceSummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TaxInvoiceSummaryDataSet.Designer.cs">
+      <DependentUpon>TaxInvoiceSummaryDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Dataset\UserDataSet.cs">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\UserDataSet.Designer.cs">
+      <DependentUpon>UserDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AccountLedger.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Address.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ConfigurationMaster.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CostingDetail.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Customer.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FinancialYearMaster.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FirmMaster.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\inventory.Context.cs">
+      <DependentUpon>inventory.Context.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\inventory.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Entities\JewelMaster.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\JewelStockLedger.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\JewelTransaction.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LoginInformation.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LooseDiamondTransaction.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Partial\JewelTransaction.cs" />
+    <Compile Include="Entities\ProductMaster.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Supplier.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TraceLog.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TransactionInvoices.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TransactionLookup.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs">
+      <DependentUpon>inventory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Events\WinEvents.cs" />
+    <Compile Include="Requests\JewelUpdateRequest.cs" />
+    <Compile Include="Interfaces\IConfigurationService.cs" />
+    <Compile Include="Interfaces\ICustomerService.cs" />
+    <Compile Include="Interfaces\IFirmService.cs" />
+    <Compile Include="Interfaces\IJewelCalculation.cs" />
+    <Compile Include="Interfaces\IJewelService.cs" />
+    <Compile Include="Interfaces\ILooseDiamondService.cs" />
+    <Compile Include="Interfaces\IReportService.cs" />
+    <Compile Include="Interfaces\ISupplierService.cs" />
+    <Compile Include="Interfaces\ITransactionService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="StaticMembers\Extenstions.cs" />
+    <Compile Include="Objects\Catalogue.cs" />
+    <Compile Include="Objects\CatalogueMetaData.cs" />
+    <Compile Include="Objects\ItemDetail.cs" />
+    <Compile Include="Objects\PurchaseTransaction.cs" />
+    <Compile Include="Interfaces\INavigable.cs" />
+    <Compile Include="Objects\CustomerItem.cs" />
+    <Compile Include="Objects\DataSetContainer.cs" />
+    <Compile Include="Enums\ColorStones.cs" />
+    <Compile Include="Objects\TransactionDetails.cs" />
+    <Compile Include="Objects\CostingRates.cs" />
+    <Compile Include="Objects\QueryRequest.cs" />
+    <Compile Include="Objects\SupplierItem.cs" />
+    <Compile Include="Objects\SupplierProperties.cs" />
+    <Compile Include="Objects\TaxInvoiceDetails.cs" />
+    <Compile Include="Objects\TransactionLookupDetail.cs" />
+    <Compile Include="Enums\UserProperties.cs" />
+    <Compile Include="Objects\CustomerProperties.cs" />
+    <Compile Include="Entities\inventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventory.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\PagedItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\CatalogueService.cs" />
+    <Compile Include="Providers\ConnectionServices.cs" />
+    <Compile Include="Providers\DataSetProvider.cs" />
+    <Compile Include="Providers\ExcelExporter.cs" />
+    <Compile Include="Objects\ReportConstants.cs" />
+    <Compile Include="Requests\CustomerRequest.cs" />
+    <Compile Include="Requests\FirmMasterRequest.cs" />
+    <Compile Include="Requests\JewelMasterRequest.cs" />
+    <Compile Include="Requests\LooseDiamondRequest.cs" />
+    <Compile Include="Requests\FinancialYearRequest.cs" />
+    <Compile Include="Requests\TaxInvoiceReportRequest.cs" />
+    <Compile Include="Responses\CustomerResponse.cs" />
+    <Compile Include="Responses\FirmResponse.cs" />
+    <Compile Include="Responses\JewelResponse.cs" />
+    <Compile Include="Responses\LooseDiamondResponse.cs" />
+    <Compile Include="Responses\FinancialYearResponse.cs" />
+    <Compile Include="Responses\TaxInvoiceReportResponse.cs" />
+    <Compile Include="Services\ConfigurationService.cs" />
+    <Compile Include="Objects\Constants.cs" />
+    <Compile Include="Responses\SalesTransactionResponse.cs" />
+    <Compile Include="Requests\SalesTransactionRequest.cs" />
+    <Compile Include="Services\JewelService.cs" />
+    <Compile Include="Services\LooseDiamondService.cs" />
+    <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\TransactionService.cs" />
+    <Compile Include="Requests\JewelTransactionRequest.cs" />
+    <Compile Include="Responses\JewelTransactionResponse.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Interfaces\IValidator.cs" />
+    <Compile Include="Requests\UserLoginRequest.cs" />
+    <Compile Include="Services\FirmService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\SupplierService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Providers\WinSettingProvider.cs" />
+    <Compile Include="Requests\ConfigMasterRequest.cs" />
+    <Compile Include="Requests\UserRequest.cs" />
+    <Compile Include="Requests\JewelPurchaseRequest.cs" />
+    <Compile Include="Requests\RequestBase.cs" />
+    <Compile Include="Requests\SupplierRequest.cs" />
+    <Compile Include="Responses\ConfigurationMasterResponse.cs" />
+    <Compile Include="Responses\SupplierResponse.cs" />
+    <Compile Include="Responses\UserResponse.cs" />
+    <Compile Include="Responses\PurchaseJewelsResponse.cs" />
+    <Compile Include="Responses\ResponseBase.cs" />
+    <Compile Include="StaticMembers\ImageExtension.cs" />
+    <Compile Include="StaticMembers\SpellNumber.cs" />
+    <EntityDeploy Include="Entities\inventory.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>inventory.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\ConfigurationDataSet.xsc">
+      <DependentUpon>ConfigurationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\ConfigurationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigurationDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\ConfigurationDataSet.xss">
+      <DependentUpon>ConfigurationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CostingChartDataSet.xsc">
+      <DependentUpon>CostingChartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CostingChartDataSet.xsd" />
+    <None Include="Dataset\CostingChartDataSet.xss">
+      <DependentUpon>CostingChartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CreditNoteDataSet.xsc">
+      <DependentUpon>CreditNoteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CreditNoteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CreditNoteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CreditNoteDataSet.xss">
+      <DependentUpon>CreditNoteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerDataSet.xsc">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\CustomerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\CustomerDataSet.xss">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FirmMasterDataSet.xsc">
+      <DependentUpon>FirmMasterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\FirmMasterDataSet.xsd" />
+    <None Include="Dataset\FirmMasterDataSet.xss">
+      <DependentUpon>FirmMasterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelMasterDataSet.xsc">
+      <DependentUpon>JewelMasterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelMasterDataSet.xsd" />
+    <None Include="Dataset\JewelMasterDataSet.xss">
+      <DependentUpon>JewelMasterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelStickerDataSet.xsc">
+      <DependentUpon>JewelStickerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelStickerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JewelStickerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\JewelStickerDataSet.xss">
+      <DependentUpon>JewelStickerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelStockDataSet.xsc">
+      <DependentUpon>JewelStockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelStockDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JewelStockDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\JewelStockDataSet.xss">
+      <DependentUpon>JewelStockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelTagDataSet.xsc">
+      <DependentUpon>JewelTagDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelTagDataSet.xsd" />
+    <None Include="Dataset\JewelTagDataSet.xss">
+      <DependentUpon>JewelTagDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelTransactionsDataSet.xsc">
+      <DependentUpon>JewelTransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\JewelTransactionsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JewelTransactionsDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\JewelTransactionsDataSet.xss">
+      <DependentUpon>JewelTransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\LooseDiamondDataSet.xsc">
+      <DependentUpon>LooseDiamondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\LooseDiamondDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LooseDiamondDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\LooseDiamondDataSet.xss">
+      <DependentUpon>LooseDiamondDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\OrderDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SupplierDataSet.xsc">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\SupplierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\SupplierDataSet.xss">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TaxInvoiceDetailDataSet.xsc">
+      <DependentUpon>TaxInvoiceDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TaxInvoiceDetailDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaxInvoiceDetailDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TaxInvoiceDetailDataSet.xss">
+      <DependentUpon>TaxInvoiceDetailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TaxInvoiceSummaryDataSet.xsc">
+      <DependentUpon>TaxInvoiceSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\TaxInvoiceSummaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaxInvoiceSummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\TaxInvoiceSummaryDataSet.xss">
+      <DependentUpon>TaxInvoiceSummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\UserDataSet.xsc">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\UserDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\UserDataSet.xss">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Entities\inventory.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>inventory.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Entities\inventory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>inventory.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\JetCoders.Shared\JetCoders.Shared.csproj">
+      <Project>{5A0817EA-EC4A-43BC-B510-FF58CD49AEE4}</Project>
+      <Name>JetCoders.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\inventory.edmx.sql" />
+    <Content Include="Entities\post.create.trigger.Sql" />
+    <Content Include="Entities\post.create.data.Sql" />
+    <EmbeddedResource Include="JewelLogo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+span.title
+{
+    font-family: Arial;
+    font-weight: bold;
+    margin: 5px;
+    text-decoration: underline;
+    color: Red;
+}
+span.jewel
+{
+    color: Green;
+    font-size: small;
+    font-weight: bold;
+}
+p.image
+{
+    margin: 10 0 10 50;
+}
+
+div.para
+{
+}
+ul
+{
+    list-style-image: url('screen/nextarrow.png');
+}

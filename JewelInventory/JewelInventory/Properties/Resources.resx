@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+<data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\remove.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\database.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\users.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="clock" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\clock.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="calendar_date" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\calendar_date.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="applications" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\applications.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="_lock" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\lock.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\back.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="computers" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\computers.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\next.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="dialogueHeaderCenter" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resources\dialogueHeaderCenter.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="filesave" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\filesave.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="TirthJewels" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\JewelLogo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\search.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="Splash" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\resource\splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="Program_Main_Your_software_demo_period_is_over__Please_contact_vendor">     <value>Your software demo period is over, please contact vendor</value>   </data><data name="Print" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resource\help.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="help1" type="System.Resources.ResXFileRef, System.Windows.Forms"><value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data><data name="frmManageTransaction_lnkRTS_LinkClicked_no_item_available_to_be_returned_">     <value>no item available to be returned.</value>   </data><data name="frmCostingBase_TryParseCostingData_The_stamping_charges_is_invalid_">     <value>The stamping charges are invalid.</value>   </data><data name="frmJewelHistory_btnShowHistory_Click_Please_enter_jewelnumber_or_design_code_">     <value>Please enter jewel number or design code.</value>   </data><data name="frmSalesOrder_OnbtnSaveClick_Please_select_jewels_">     <value>Please select jewels.</value>   </data><data name="frmConfiguration_btnSave_Click_Please_select_costing_category">     <value>Please select costing category</value>   </data><data name="frmConnection_btnConnect_Click_Connection_to_server_succeeded__Please_restart_your_application_">     <value>Connection to server succeeded, Please restart your application.</value>   </data><data name="frmCustomerDataEntry_btnSave_Click_Please_Enter_Valid_Email_Address_">     <value>Please Enter Valid Email Address.</value>   </data><data name="frmExcelCostingRates_openFileDialog1_FileOk_Please_ensure_excel_file_is_numbered_correctly_">     <value>Please ensure excel file is numbered correctly.</value>   </data><data name="frmFinancialYear_btnSave_Click_">     <value>Cancelling financial year record cannot be undone. if you have done any transaction and choosing for cancellation, transaction might be in inconsistence state, please consult your vendor.   Are you sure wanted to cancel financial record?</value>   </data><data name="frmJewelHistory_btnShowHistory_Click_No_transaction_found_">     <value>No transaction found.</value>   </data><data name="frmManageUser_btnSave_Click_Please_Enter_Valid_Email_Address_">     <value>Please Enter Valid Email Address.</value>   </data><data name="frmMemoOrder_onbtnNextClick_Please_select_record_to_create_memo__">     <value>Please select record to create memo!</value>   </data><data name="frmSupplierDataEntry_btnSave_Click_Please_Enter_Valid_Email_Address_">     <value>Please Enter Valid Email Address.</value>   </data><data name="BaseFormControl_CellMouseMove_Click_here_for_Thumbnails">     <value>Click here for Thumbnails</value>   </data><data name="BaseFormControl_CloseOrderForm_Are_you_sure_want_to_cancel_order_">     <value>Are you sure wanted to cancel order?</value>   </data><data name="frmDataEntry_frmDataEntry_FormClosing_You_haven_t_saved_your_data_">     <value>You haven't saved your data.</value>   </data><data name="frmConnection_btnConnect_Click_Connection_to_server_failed_">     <value>Connection to server failed.</value>   </data><data name="frmCostingBase_frmCostingBase_Load________Costing_Rates_">     <value>       Costing Rates </value>   </data><data name="frmCostingBase_TryParseCostingData_Incomplete_information_provided_">     <value>Incomplete information provided.</value>   </data><data name="frmCostingBase_TryParseCostingData_No_costing_details_found__Please_fill_costing_chart_completly_">     <value>No costing details found. Please fill costing chart completely.</value>   </data><data name="frmCostingConfirmation_frmContingConfirmation_Load__Data_Saved_Successfuly">     <value> Data Saved Successfully</value>   </data><data name="frmCostingRates_OnPrevClick_Your_current_form_details_will_be_cleared_out__Are_you_sure_want_to_go_back__">     <value>Your current form details will be cleared out, Are you sure want to go back?</value>   </data><data name="frmCostingRates_onSaveClick_Incomplete_information_provided_">     <value>Incomplete information provided.</value>   </data><data name="frmJewelTransactionsReport_GetJewelTransactionReport_No_Data_found_">     <value>No Data found!</value>   </data><data name="frmLogin_btnLOGIN_Click_Invalid_username_or_password">     <value>Invalid username or password</value>   </data><data name="frmLooseDiamonds_btnSave_Click_Record_saved_">     <value>Record saved!</value>   </data><data name="frmManageTransaction_lnkRTS_LinkClicked_Are_you_sure_want_to_return_stock_into_account">     <value>Are you sure wanted to return stock into account?</value>   </data><data name="frmManageTransaction_lnkRTS_LinkClicked_Return_To_Stock">     <value>Return To Stock</value>   </data><data name="frmDataEntry_frmDataEntry_FormClosing_Are_you_sure_you_want_to_Exit_">     <value>Are you sure you want to Exit?</value>   </data><data name="frmExcelCostingRates_OnPrevClick_Your_current_form_details_will_be_cleared_out__Are_you_sure_want_to_go_back__">     <value>Your current form details will be cleared out, Are you sure want to go back?</value>   </data><data name="frmSettings_btnSave_Click_Please_enter_proper_folder_path">     <value>Please enter proper folder path</value>   </data><data name="frmSettings_btnSave_Click_Image_Directory_path_not_set____please_set_it_from_Tools____App_Settings__">     <value>Image Directory path not set! Please set it from Tools -&gt; App Settings!</value>   </data><data name="frmSettings_btnSave_Click_Setting_are_Saved">     <value>Settings are saved</value>   </data><data name="frmSettings_btnSave_Click_Error___Folder_Path_Not_Found">     <value>Error - folder path not found</value>   </data><data name="frmFirmMaster_btnSave_Click_Invalid_TAX_field">     <value>Invalid TAX field</value>   </data><data name="frmFirmMaster_btnSave_Click_Please_Enter_Valid_Email_Address_">     <value>Please enter valid email address.</value>   </data><data name="frmFirmMaster_btnSave_Click_Invalid_Other_TAX_field">     <value>Invalid other TAX field</value>   </data><data name="frmFirmMaster_btnSave_Click_Invalid_file_Logo_path_">     <value>Invalid logo file path.</value>   </data><data name="frmPartyTransaction_btnShowTransactions_Click_Please_correct_transaction_date_">     <value>Please correct transaction date.</value>   </data><data name="frmMasterMaintenance_btnSave_Click_">     <value>Jewel data updated successfully, Please go to manage transaction to print new tag.</value>   </data><data name="frmManageUser_btnSave_Click_Record_saved_">     <value>Record saved!</value>   </data><data name="frmPartyTransaction_FindTransaction_No_transaction_found_for_this_period_">     <value>No transaction found for this period.</value>   </data><data name="frmExcelCostingRates_openFileDialog1_FileOk_">     <value>=====================================</value>   </data><data name="frmExcelCostingRates_openFileDialog1_FileOk_Following_error_s__occoured_while_processing_your_excel">     <value>Following error(s) occurred while processing your excel</value>   </data><data name="frmManageTransaction_btnGo_Click_Please_select_transaction">     <value>Please select transaction</value>   </data><data name="frmFinancialYear_btnSave_Click_Record_saved_">     <value>Record saved!</value>   </data><data name="frmSupplierDataEntry_btnSave_Click_Record_saved_">     <value>Record saved!</value>   </data><data name="frmMDIParent__terminate_Are_you_sure_want_to_exit__">     <value>Are you sure wanted to exit?</value>   </data><data name="frmMDIParent__terminate_Exit_Application">     <value>Exit Application</value>   </data><data name="frmCustomerDataEntry_btnSave_Click_Record_saved_">     <value>Record saved!</value>   </data><data name="frmMDIParent_frmMDIParent_Load_Image_Directory_path_not_set____please_set_it_from_Tools____App_Settings__">     <value>Image Directory path not set! Please set it from Tools -&gt; App Settings!</value>   </data><data name="frmMemoOrder_FindJewelByJewelNo__already_exists__Please_search_for_new_record_">     <value> Already exists! Please search for new record </value>   </data><data name="frmSalesOrder_OnbtnSaveClick_Records_Added_Successfully">     <value>Records Added Successfully</value>   </data><data name="frmMemoOrder_FindJewelByJewelNo_Records_Not_found__">     <value>Records not found!</value>   </data><data name="frmMDIParent_CheckUserAccess_">     <value>Financial year is not set for current date, please create financial year, Click OK to create financial year.</value>   </data><data name="frmMDIParent_backupToolStripMenuItem_Click_Are_you_sure_want_to_close_current_application">     <value>Are you sure to close current application?</value>   </data><data name="frmCostingRates_OnAddtoListClick_Incomplete_information_provided_">     <value>Incomplete information provided.</value>   </data><data name="frmCostingRates_OnClearAllItemsClick_Are_you_sure_want_to_clear_out_all_records_">     <value>Are you sure want to clear out all records?</value>   </data><data name="frmMemoOrder_VALIDATEDATAGRID_The_stamping_charges_is_invalid_">     <value>The stamping charges are invalid.</value>   </data><data name="frmConnection_btnConnect_Click_Connection_to_server_succeeded_">     <value>Connection to server succeeded.</value>   </data></root>

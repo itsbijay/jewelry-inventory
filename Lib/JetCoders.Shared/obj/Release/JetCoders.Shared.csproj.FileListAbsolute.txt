@@ -1,0 +1,5 @@
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\bin\Release\JetCoders.Shared.dll
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\bin\Release\JetCoders.Shared.pdb
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Release\ResolveAssemblyReference.cache
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Release\JetCoders.Shared.dll
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Release\JetCoders.Shared.pdb

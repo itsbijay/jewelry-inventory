@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E78E0073-C3CF-4988-B9A9-D9DEC8EFA7E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JewelCatalogue</RootNamespace>
+    <AssemblyName>JewelCatalogue</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_RUNTIMEMODE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>ENABLE_RUNTIMEMODE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Crystal Report\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Crystal Report\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Crystal Report\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Crystal Report\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\Lib\Microsoft.Practices.Unity\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\Lib\NLog2.netfx40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseFormControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdvancesearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvancesearch.Designer.cs">
+      <DependentUpon>frmAdvancesearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllCatalogueProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllCatalogueProduct.Designer.cs">
+      <DependentUpon>frmAllCatalogueProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllJewelsBarcodePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllJewelsBarcodePrint.Designer.cs">
+      <DependentUpon>frmAllJewelsBarcodePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBarCodeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBarCodeOrder.Designer.cs">
+      <DependentUpon>frmBarCodeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogue.Designer.cs">
+      <DependentUpon>frmCatalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataEntry.designer.cs">
+      <DependentUpon>frmDataEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJewelMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJewelMaster.designer.cs">
+      <DependentUpon>frmJewelMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJewelMasterDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJewelMasterDetails.Designer.cs">
+      <DependentUpon>frmJewelMasterDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIParent.Designer.cs">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNavigableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductWideImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductWideImage.Designer.cs">
+      <DependentUpon>frmProductWideImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\help.png" />
+    <None Include="Resource\HHHH-232013_15_00_20.jpg" />
+    <None Include="Resource\HGHGGG-232013_14_44_14.jpg" />
+    <None Include="Resource\Foo.jpg" />
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\JewelLogo.JPG" />
+    <None Include="Resource\Print.png" />
+    <EmbeddedResource Include="frmAdvancesearch.resx">
+      <DependentUpon>frmAdvancesearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllJewelsBarcodePrint.resx">
+      <DependentUpon>frmAllJewelsBarcodePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJewelMasterDetails.resx">
+      <DependentUpon>frmJewelMasterDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\users.ico" />
+    <Content Include="JewelMaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JewelMaster.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resource\TirthJewels.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Tirth_Inventory_Icon.ico" />
+    <EmbeddedResource Include="Resource\Splash.png" />
+    <EmbeddedResource Include="Resource\search.ico" />
+    <EmbeddedResource Include="Resource\remove.ico" />
+    <EmbeddedResource Include="Resource\refresh-icon.png" />
+    <EmbeddedResource Include="Resource\next.ico" />
+    <EmbeddedResource Include="Resource\navigate-right-icon.png" />
+    <EmbeddedResource Include="Resource\navigate-left-icon.png" />
+    <EmbeddedResource Include="Resource\Misc-Delete-Database-icon.png" />
+    <EmbeddedResource Include="Resource\lock.ico" />
+    <EmbeddedResource Include="Resource\hide-right-icon.png" />
+    <EmbeddedResource Include="Resource\hide-left-icon.png" />
+    <EmbeddedResource Include="Resource\help.ico" />
+    <EmbeddedResource Include="Resource\filesave.ico" />
+    <EmbeddedResource Include="Resource\database.ico" />
+    <EmbeddedResource Include="frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllCatalogueProduct.resx">
+      <DependentUpon>frmAllCatalogueProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBarCodeOrder.resx">
+      <DependentUpon>frmBarCodeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogue.resx">
+      <DependentUpon>frmCatalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJewelMaster.resx">
+      <DependentUpon>frmJewelMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIParent.resx">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductWideImage.resx">
+      <DependentUpon>frmProductWideImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resource\COSTING_FORMAT.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\JetCoders.Forms.UI\JetCoders.Forms.UI.csproj">
+      <Project>{77FB2ED1-B6BE-4425-8B29-51E8565E84EC}</Project>
+      <Name>JetCoders.Forms.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\JetCoders.Shared\JetCoders.Shared.csproj">
+      <Project>{5A0817EA-EC4A-43BC-B510-FF58CD49AEE4}</Project>
+      <Name>JetCoders.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connections\Connections.csproj">
+      <Project>{81C613A3-F484-4BB7-9EB2-AA4614A95B0B}</Project>
+      <Name>Connections</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\add-to-database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\application-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\applications.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\calendar_date.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\computers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(ProjectDir)JewelMaster.rpt" "$(ProjectDir)$(OutDir)" /Y
+xcopy "$(ProjectDir)OrderReport.rpt" "$(ProjectDir)$(OutDir)" /Y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

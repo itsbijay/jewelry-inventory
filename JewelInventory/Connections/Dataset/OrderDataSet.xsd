@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderDataSet" targetNamespace="http://tempuri.org/OrderDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderDataSet.xsd" xmlns="http://tempuri.org/OrderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OrderDataSet" msprop:Generator_UserDSName="OrderDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SummaryDataTable" msprop:Generator_TableClassName="SummaryDataTableDataTable" msprop:Generator_TableVarName="tableSummaryDataTable" msprop:Generator_RowChangedName="SummaryDataTableRowChanged" msprop:Generator_TablePropName="SummaryDataTable" msprop:Generator_RowDeletingName="SummaryDataTableRowDeleting" msprop:Generator_RowChangingName="SummaryDataTableRowChanging" msprop:Generator_RowEvHandlerName="SummaryDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="SummaryDataTableRowDeleted" msprop:Generator_RowClassName="SummaryDataTableRow" msprop:Generator_UserTableName="SummaryDataTable" msprop:Generator_RowEvArgName="SummaryDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalItems" msprop:Generator_ColumnVarNameInTable="columnTotalItems" msprop:Generator_ColumnPropNameInRow="TotalItems" msprop:Generator_ColumnPropNameInTable="TotalItemsColumn" msprop:Generator_UserColumnName="TotalItems" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalNetWt" msprop:Generator_ColumnVarNameInTable="columnTotalNetWt" msprop:Generator_ColumnPropNameInRow="TotalNetWt" msprop:Generator_ColumnPropNameInTable="TotalNetWtColumn" msprop:Generator_UserColumnName="TotalNetWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalGrsWt" msprop:Generator_ColumnVarNameInTable="columnTotalGrsWt" msprop:Generator_ColumnPropNameInRow="TotalGrsWt" msprop:Generator_ColumnPropNameInTable="TotalGrsWtColumn" msprop:Generator_UserColumnName="TotalGrsWt" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalDiaWt" msprop:Generator_ColumnVarNameInTable="columnTotalDiaWt" msprop:Generator_ColumnPropNameInRow="TotalDiaWt" msprop:Generator_ColumnPropNameInTable="TotalDiaWtColumn" msprop:Generator_UserColumnName="TotalDiaWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalDiaPcs" msprop:Generator_ColumnVarNameInTable="columnTotalDiaPcs" msprop:Generator_ColumnPropNameInRow="TotalDiaPcs" msprop:Generator_ColumnPropNameInTable="TotalDiaPcsColumn" msprop:Generator_UserColumnName="TotalDiaPcs" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatalogueMetaDataTable" msprop:Generator_TableClassName="CatalogueMetaDataTableDataTable" msprop:Generator_TableVarName="tableCatalogueMetaDataTable" msprop:Generator_RowChangedName="CatalogueMetaDataTableRowChanged" msprop:Generator_TablePropName="CatalogueMetaDataTable" msprop:Generator_RowDeletingName="CatalogueMetaDataTableRowDeleting" msprop:Generator_RowChangingName="CatalogueMetaDataTableRowChanging" msprop:Generator_RowEvHandlerName="CatalogueMetaDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CatalogueMetaDataTableRowDeleted" msprop:Generator_RowClassName="CatalogueMetaDataTableRow" msprop:Generator_UserTableName="CatalogueMetaDataTable" msprop:Generator_RowEvArgName="CatalogueMetaDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SrNo" msprop:Generator_ColumnVarNameInTable="columnSrNo" msprop:Generator_ColumnPropNameInRow="SrNo" msprop:Generator_ColumnPropNameInTable="SrNoColumn" msprop:Generator_UserColumnName="SrNo" type="xs:int" minOccurs="0" />
+              <xs:element name="JewelNo" msprop:Generator_ColumnVarNameInTable="columnJewelNo" msprop:Generator_ColumnPropNameInRow="JewelNo" msprop:Generator_ColumnPropNameInTable="JewelNoColumn" msprop:Generator_UserColumnName="JewelNo" type="xs:string" minOccurs="0" />
+              <xs:element name="StyleNo" msprop:Generator_ColumnVarNameInTable="columnStyleNo" msprop:Generator_ColumnPropNameInRow="StyleNo" msprop:Generator_ColumnPropNameInTable="StyleNoColumn" msprop:Generator_UserColumnName="StyleNo" type="xs:string" minOccurs="0" />
+              <xs:element name="JewelDescription" msprop:Generator_ColumnVarNameInTable="columnJewelDescription" msprop:Generator_ColumnPropNameInRow="JewelDescription" msprop:Generator_ColumnPropNameInTable="JewelDescriptionColumn" msprop:Generator_UserColumnName="JewelDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="MetalColor" msprop:Generator_ColumnVarNameInTable="columnMetalColor" msprop:Generator_ColumnPropNameInRow="MetalColor" msprop:Generator_ColumnPropNameInTable="MetalColorColumn" msprop:Generator_UserColumnName="MetalColor" type="xs:string" minOccurs="0" />
+              <xs:element name="ImagePath" msprop:Generator_ColumnVarNameInTable="columnImagePath" msprop:Generator_ColumnPropNameInRow="ImagePath" msprop:Generator_ColumnPropNameInTable="ImagePathColumn" msprop:Generator_UserColumnName="ImagePath" type="xs:string" minOccurs="0" />
+              <xs:element name="DiaPcs" msprop:Generator_ColumnVarNameInTable="columnDiaPcs" msprop:Generator_ColumnPropNameInRow="DiaPcs" msprop:Generator_ColumnPropNameInTable="DiaPcsColumn" msprop:Generator_UserColumnName="DiaPcs" type="xs:int" minOccurs="0" />
+              <xs:element name="DiaWt" msprop:Generator_ColumnVarNameInTable="columnDiaWt" msprop:Generator_ColumnPropNameInRow="DiaWt" msprop:Generator_ColumnPropNameInTable="DiaWtColumn" msprop:Generator_UserColumnName="DiaWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GrsWt" msprop:Generator_ColumnVarNameInTable="columnGrsWt" msprop:Generator_ColumnPropNameInRow="GrsWt" msprop:Generator_ColumnPropNameInTable="GrsWtColumn" msprop:Generator_UserColumnName="GrsWt" type="xs:int" minOccurs="0" />
+              <xs:element name="NetWt" msprop:Generator_ColumnVarNameInTable="columnNetWt" msprop:Generator_ColumnPropNameInRow="NetWt" msprop:Generator_ColumnPropNameInTable="NetWtColumn" msprop:Generator_UserColumnName="NetWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="JewelImage" msprop:Generator_ColumnVarNameInTable="columnJewelImage" msprop:Generator_ColumnPropNameInRow="JewelImage" msprop:Generator_ColumnPropNameInTable="JewelImageColumn" msprop:Generator_UserColumnName="JewelImage" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatalogueSummaryDataTable" msprop:Generator_TableClassName="CatalogueSummaryDataTableDataTable" msprop:Generator_TableVarName="tableCatalogueSummaryDataTable" msprop:Generator_RowChangedName="CatalogueSummaryDataTableRowChanged" msprop:Generator_TablePropName="CatalogueSummaryDataTable" msprop:Generator_RowDeletingName="CatalogueSummaryDataTableRowDeleting" msprop:Generator_RowChangingName="CatalogueSummaryDataTableRowChanging" msprop:Generator_RowEvHandlerName="CatalogueSummaryDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CatalogueSummaryDataTableRowDeleted" msprop:Generator_RowClassName="CatalogueSummaryDataTableRow" msprop:Generator_UserTableName="CatalogueSummaryDataTable" msprop:Generator_RowEvArgName="CatalogueSummaryDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GrsWt" msprop:Generator_ColumnVarNameInTable="columnGrsWt" msprop:Generator_ColumnPropNameInRow="GrsWt" msprop:Generator_ColumnPropNameInTable="GrsWtColumn" msprop:Generator_UserColumnName="GrsWt" type="xs:int" minOccurs="0" />
+              <xs:element name="NetWt" msprop:Generator_ColumnVarNameInTable="columnNetWt" msprop:Generator_ColumnPropNameInRow="NetWt" msprop:Generator_ColumnPropNameInTable="NetWtColumn" msprop:Generator_UserColumnName="NetWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiaPcs" msprop:Generator_ColumnVarNameInTable="columnDiaPcs" msprop:Generator_ColumnPropNameInRow="DiaPcs" msprop:Generator_ColumnPropNameInTable="DiaPcsColumn" msprop:Generator_UserColumnName="DiaPcs" type="xs:int" minOccurs="0" />
+              <xs:element name="DiaWt" msprop:Generator_ColumnVarNameInTable="columnDiaWt" msprop:Generator_ColumnPropNameInRow="DiaWt" msprop:Generator_ColumnPropNameInTable="DiaWtColumn" msprop:Generator_UserColumnName="DiaWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="JewelDescription" msprop:Generator_ColumnVarNameInTable="columnJewelDescription" msprop:Generator_ColumnPropNameInRow="JewelDescription" msprop:Generator_ColumnPropNameInTable="JewelDescriptionColumn" msprop:Generator_UserColumnName="JewelDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalProducts" msprop:Generator_ColumnVarNameInTable="columnTotalProducts" msprop:Generator_ColumnPropNameInRow="TotalProducts" msprop:Generator_ColumnPropNameInTable="TotalProductsColumn" msprop:Generator_UserColumnName="TotalProducts" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FirmMaster" msdata:CaseSensitive="True" msprop:Generator_TableClassName="FirmMasterDataTable" msprop:Generator_TableVarName="tableFirmMaster" msprop:Generator_TablePropName="FirmMaster" msprop:Generator_RowDeletingName="FirmMasterRowDeleting" msprop:Generator_RowChangingName="FirmMasterRowChanging" msprop:Generator_RowEvHandlerName="FirmMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmMasterRowDeleted" msprop:Generator_UserTableName="FirmMaster" msprop:Generator_RowChangedName="FirmMasterRowChanged" msprop:Generator_RowEvArgName="FirmMasterRowChangeEvent" msprop:Generator_RowClassName="FirmMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirmMasterId" msprop:Generator_ColumnVarNameInTable="columnFirmMasterId" msprop:Generator_ColumnPropNameInRow="FirmMasterId" msprop:Generator_ColumnPropNameInTable="FirmMasterIdColumn" msprop:Generator_UserColumnName="FirmMasterId" type="xs:int" minOccurs="0" />
+              <xs:element name="FirmName" msprop:Generator_ColumnVarNameInTable="columnFirmName" msprop:Generator_ColumnPropNameInRow="FirmName" msprop:Generator_ColumnPropNameInTable="FirmNameColumn" msprop:Generator_UserColumnName="FirmName" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmTopHeader" msprop:Generator_ColumnVarNameInTable="columnFirmTopHeader" msprop:Generator_ColumnPropNameInRow="FirmTopHeader" msprop:Generator_ColumnPropNameInTable="FirmTopHeaderColumn" msprop:Generator_UserColumnName="FirmTopHeader" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmEmail" msprop:Generator_ColumnVarNameInTable="columnFirmEmail" msprop:Generator_ColumnPropNameInRow="FirmEmail" msprop:Generator_ColumnPropNameInTable="FirmEmailColumn" msprop:Generator_UserColumnName="FirmEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmHeader" msprop:Generator_ColumnVarNameInTable="columnFirmHeader" msprop:Generator_ColumnPropNameInRow="FirmHeader" msprop:Generator_ColumnPropNameInTable="FirmHeaderColumn" msprop:Generator_UserColumnName="FirmHeader" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmWebsite" msprop:Generator_ColumnVarNameInTable="columnFirmWebsite" msprop:Generator_ColumnPropNameInRow="FirmWebsite" msprop:Generator_ColumnPropNameInTable="FirmWebsiteColumn" msprop:Generator_UserColumnName="FirmWebsite" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmLogo" msprop:Generator_ColumnVarNameInTable="columnFirmLogo" msprop:Generator_ColumnPropNameInRow="FirmLogo" msprop:Generator_ColumnPropNameInTable="FirmLogoColumn" msprop:Generator_UserColumnName="FirmLogo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FirmAddress" msprop:Generator_ColumnVarNameInTable="columnFirmAddress" msprop:Generator_ColumnPropNameInRow="FirmAddress" msprop:Generator_ColumnPropNameInTable="FirmAddressColumn" msprop:Generator_UserColumnName="FirmAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdditionalInfo" msprop:Generator_ColumnVarNameInTable="columnFirmAdditionalInfo" msprop:Generator_ColumnPropNameInRow="FirmAdditionalInfo" msprop:Generator_ColumnPropNameInTable="FirmAdditionalInfoColumn" msprop:Generator_UserColumnName="FirmAdditionalInfo" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmVATNumber" msprop:Generator_ColumnVarNameInTable="columnFirmVATNumber" msprop:Generator_ColumnPropNameInRow="FirmVATNumber" msprop:Generator_ColumnPropNameInTable="FirmVATNumberColumn" msprop:Generator_UserColumnName="FirmVATNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmTINNumber" msprop:Generator_ColumnVarNameInTable="columnFirmTINNumber" msprop:Generator_ColumnPropNameInRow="FirmTINNumber" msprop:Generator_ColumnPropNameInTable="FirmTINNumberColumn" msprop:Generator_UserColumnName="FirmTINNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_UserColumnName="Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherTax" msprop:Generator_ColumnVarNameInTable="columnOtherTax" msprop:Generator_ColumnPropNameInRow="OtherTax" msprop:Generator_ColumnPropNameInTable="OtherTaxColumn" msprop:Generator_UserColumnName="OtherTax" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

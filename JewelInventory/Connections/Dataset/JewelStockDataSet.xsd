@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JewelStockDataSet1" targetNamespace="http://tempuri.org/JewelStockDataSet1.xsd" xmlns:mstns="http://tempuri.org/JewelStockDataSet1.xsd" xmlns="http://tempuri.org/JewelStockDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JewelStockDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="JewelStockDataSet1" msprop:Generator_UserDSName="JewelStockDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JewelStockLedger" msprop:Generator_TableClassName="JewelStockLedgerDataTable" msprop:Generator_TableVarName="tableJewelStockLedger" msprop:Generator_RowChangedName="JewelStockLedgerRowChanged" msprop:Generator_TablePropName="JewelStockLedger" msprop:Generator_RowDeletingName="JewelStockLedgerRowDeleting" msprop:Generator_RowChangingName="JewelStockLedgerRowChanging" msprop:Generator_RowEvHandlerName="JewelStockLedgerRowChangeEventHandler" msprop:Generator_RowDeletedName="JewelStockLedgerRowDeleted" msprop:Generator_RowClassName="JewelStockLedgerRow" msprop:Generator_UserTableName="JewelStockLedger" msprop:Generator_RowEvArgName="JewelStockLedgerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JewelStockMasterId" msprop:Generator_ColumnVarNameInTable="columnJewelStockMasterId" msprop:Generator_ColumnPropNameInRow="JewelStockMasterId" msprop:Generator_ColumnPropNameInTable="JewelStockMasterIdColumn" msprop:Generator_UserColumnName="JewelStockMasterId" type="xs:int" minOccurs="0" />
+              <xs:element name="JewelNumber" msprop:Generator_ColumnVarNameInTable="columnJewelNumber" msprop:Generator_ColumnPropNameInRow="JewelNumber" msprop:Generator_ColumnPropNameInTable="JewelNumberColumn" msprop:Generator_UserColumnName="JewelNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignCode" msprop:Generator_ColumnVarNameInTable="columnDesignCode" msprop:Generator_ColumnPropNameInRow="DesignCode" msprop:Generator_ColumnPropNameInTable="DesignCodeColumn" msprop:Generator_UserColumnName="DesignCode" type="xs:string" minOccurs="0" />
+              <xs:element name="MetalType" msprop:Generator_ColumnVarNameInTable="columnMetalType" msprop:Generator_ColumnPropNameInRow="MetalType" msprop:Generator_ColumnPropNameInTable="MetalTypeColumn" msprop:Generator_UserColumnName="MetalType" type="xs:string" minOccurs="0" />
+              <xs:element name="KT" msprop:Generator_ColumnVarNameInTable="columnKT" msprop:Generator_ColumnPropNameInRow="KT" msprop:Generator_ColumnPropNameInTable="KTColumn" msprop:Generator_UserColumnName="KT" type="xs:string" minOccurs="0" />
+              <xs:element name="StoneType" msprop:Generator_ColumnVarNameInTable="columnStoneType" msprop:Generator_ColumnPropNameInRow="StoneType" msprop:Generator_ColumnPropNameInTable="StoneTypeColumn" msprop:Generator_UserColumnName="StoneType" type="xs:string" minOccurs="0" />
+              <xs:element name="MetalWeight" msprop:Generator_ColumnVarNameInTable="columnMetalWeight" msprop:Generator_ColumnPropNameInRow="MetalWeight" msprop:Generator_ColumnPropNameInTable="MetalWeightColumn" msprop:Generator_UserColumnName="MetalWeight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StoneWeight" msprop:Generator_ColumnVarNameInTable="columnStoneWeight" msprop:Generator_ColumnPropNameInRow="StoneWeight" msprop:Generator_ColumnPropNameInTable="StoneWeightColumn" msprop:Generator_UserColumnName="StoneWeight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StonePcs" msprop:Generator_ColumnVarNameInTable="columnStonePcs" msprop:Generator_ColumnPropNameInRow="StonePcs" msprop:Generator_ColumnPropNameInTable="StonePcsColumn" msprop:Generator_UserColumnName="StonePcs" type="xs:int" minOccurs="0" />
+              <xs:element name="ColorStonePcs" msprop:Generator_ColumnVarNameInTable="columnColorStonePcs" msprop:Generator_ColumnPropNameInRow="ColorStonePcs" msprop:Generator_ColumnPropNameInTable="ColorStonePcsColumn" msprop:Generator_UserColumnName="ColorStonePcs" type="xs:int" minOccurs="0" />
+              <xs:element name="ColorStoneWt" msprop:Generator_ColumnVarNameInTable="columnColorStoneWt" msprop:Generator_ColumnPropNameInRow="ColorStoneWt" msprop:Generator_ColumnPropNameInTable="ColorStoneWtColumn" msprop:Generator_UserColumnName="ColorStoneWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SrNo" msprop:Generator_ColumnVarNameInTable="columnSrNo" msprop:Generator_ColumnPropNameInRow="SrNo" msprop:Generator_ColumnPropNameInTable="SrNoColumn" msprop:Generator_UserColumnName="SrNo" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalWeight" msprop:Generator_ColumnVarNameInTable="columnTotalWeight" msprop:Generator_ColumnPropNameInRow="TotalWeight" msprop:Generator_ColumnPropNameInTable="TotalWeightColumn" msprop:Generator_UserColumnName="TotalWeight" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="JewelStockSummary" msprop:Generator_TableClassName="JewelStockSummaryDataTable" msprop:Generator_TableVarName="tableJewelStockSummary" msprop:Generator_RowChangedName="JewelStockSummaryRowChanged" msprop:Generator_TablePropName="JewelStockSummary" msprop:Generator_RowDeletingName="JewelStockSummaryRowDeleting" msprop:Generator_RowChangingName="JewelStockSummaryRowChanging" msprop:Generator_RowEvHandlerName="JewelStockSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="JewelStockSummaryRowDeleted" msprop:Generator_RowClassName="JewelStockSummaryRow" msprop:Generator_UserTableName="JewelStockSummary" msprop:Generator_RowEvArgName="JewelStockSummaryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalInStock" msprop:Generator_ColumnVarNameInTable="columnTotalInStock" msprop:Generator_ColumnPropNameInRow="TotalInStock" msprop:Generator_ColumnPropNameInTable="TotalInStockColumn" msprop:Generator_UserColumnName="TotalInStock" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalOutOfStock" msprop:Generator_ColumnVarNameInTable="columnTotalOutOfStock" msprop:Generator_ColumnPropNameInRow="TotalOutOfStock" msprop:Generator_ColumnPropNameInTable="TotalOutOfStockColumn" msprop:Generator_UserColumnName="TotalOutOfStock" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalOnApproval" msprop:Generator_ColumnVarNameInTable="columnTotalOnApproval" msprop:Generator_ColumnPropNameInRow="TotalOnApproval" msprop:Generator_ColumnPropNameInTable="TotalOnApprovalColumn" msprop:Generator_UserColumnName="TotalOnApproval" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FirmMaster" msdata:CaseSensitive="True" msprop:Generator_TableClassName="FirmMasterDataTable" msprop:Generator_TableVarName="tableFirmMaster" msprop:Generator_TablePropName="FirmMaster" msprop:Generator_RowDeletingName="FirmMasterRowDeleting" msprop:Generator_RowChangingName="FirmMasterRowChanging" msprop:Generator_RowEvHandlerName="FirmMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmMasterRowDeleted" msprop:Generator_UserTableName="FirmMaster" msprop:Generator_RowChangedName="FirmMasterRowChanged" msprop:Generator_RowEvArgName="FirmMasterRowChangeEvent" msprop:Generator_RowClassName="FirmMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirmMasterId" msprop:Generator_ColumnVarNameInTable="columnFirmMasterId" msprop:Generator_ColumnPropNameInRow="FirmMasterId" msprop:Generator_ColumnPropNameInTable="FirmMasterIdColumn" msprop:Generator_UserColumnName="FirmMasterId" type="xs:int" minOccurs="0" />
+              <xs:element name="FirmName" msprop:Generator_ColumnVarNameInTable="columnFirmName" msprop:Generator_ColumnPropNameInRow="FirmName" msprop:Generator_ColumnPropNameInTable="FirmNameColumn" msprop:Generator_UserColumnName="FirmName" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmTopHeader" msprop:Generator_ColumnVarNameInTable="columnFirmTopHeader" msprop:Generator_ColumnPropNameInRow="FirmTopHeader" msprop:Generator_ColumnPropNameInTable="FirmTopHeaderColumn" msprop:Generator_UserColumnName="FirmTopHeader" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmEmail" msprop:Generator_ColumnVarNameInTable="columnFirmEmail" msprop:Generator_ColumnPropNameInRow="FirmEmail" msprop:Generator_ColumnPropNameInTable="FirmEmailColumn" msprop:Generator_UserColumnName="FirmEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmHeader" msprop:Generator_ColumnVarNameInTable="columnFirmHeader" msprop:Generator_ColumnPropNameInRow="FirmHeader" msprop:Generator_ColumnPropNameInTable="FirmHeaderColumn" msprop:Generator_UserColumnName="FirmHeader" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmWebsite" msprop:Generator_ColumnVarNameInTable="columnFirmWebsite" msprop:Generator_ColumnPropNameInRow="FirmWebsite" msprop:Generator_ColumnPropNameInTable="FirmWebsiteColumn" msprop:Generator_UserColumnName="FirmWebsite" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmLogo" msprop:Generator_ColumnVarNameInTable="columnFirmLogo" msprop:Generator_ColumnPropNameInRow="FirmLogo" msprop:Generator_ColumnPropNameInTable="FirmLogoColumn" msprop:Generator_UserColumnName="FirmLogo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FirmAddress" msprop:Generator_ColumnVarNameInTable="columnFirmAddress" msprop:Generator_ColumnPropNameInRow="FirmAddress" msprop:Generator_ColumnPropNameInTable="FirmAddressColumn" msprop:Generator_UserColumnName="FirmAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmAdditionalInfo" msprop:Generator_ColumnVarNameInTable="columnFirmAdditionalInfo" msprop:Generator_ColumnPropNameInRow="FirmAdditionalInfo" msprop:Generator_ColumnPropNameInTable="FirmAdditionalInfoColumn" msprop:Generator_UserColumnName="FirmAdditionalInfo" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmVATNumber" msprop:Generator_ColumnVarNameInTable="columnFirmVATNumber" msprop:Generator_ColumnPropNameInRow="FirmVATNumber" msprop:Generator_ColumnPropNameInTable="FirmVATNumberColumn" msprop:Generator_UserColumnName="FirmVATNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmTINNumber" msprop:Generator_ColumnVarNameInTable="columnFirmTINNumber" msprop:Generator_ColumnPropNameInRow="FirmTINNumber" msprop:Generator_ColumnPropNameInTable="FirmTINNumberColumn" msprop:Generator_UserColumnName="FirmTINNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_UserColumnName="Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherTax" msprop:Generator_ColumnVarNameInTable="columnOtherTax" msprop:Generator_ColumnPropNameInRow="OtherTax" msprop:Generator_ColumnPropNameInTable="OtherTaxColumn" msprop:Generator_UserColumnName="OtherTax" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="add-to-database-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\add-to-database-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navigate-left-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\navigate-left-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\refresh-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Print1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HHHH-232013_15_00_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\HHHH-232013_15_00_20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navigate-right-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\navigate-right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HGHGGG-232013_14_44_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\HGHGGG-232013_14_44_14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hide-right-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\hide-right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hide-left-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\hide-left-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TirthJewels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\TirthJewels.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Misc-Delete-Database-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Misc-Delete-Database-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JewelLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\JewelLogo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="application-edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\application-edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Foo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Foo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmAllCatalogueProduct_btnProcess_Click_Please_enter_Customer_Name_for_Excel_Process_" xml:space="preserve">
+    <value>Please enter Customer Name for Excel Process.</value>
+  </data>
+  <data name="frmAllCatalogueProduct_btnProcess_Click_Jewel_Order_Report" xml:space="preserve">
+    <value>Jewel Order Report</value>
+  </data>
+  <data name="frmBarCodeOrder_btnProcess_Click_Jewel_Order_Report" xml:space="preserve">
+    <value>Jewel Order Report</value>
+  </data>
+  <data name="frmBarCodeOrder_btnProcess_Click_Please_select_Jewelno_for_Excel_Process_" xml:space="preserve">
+    <value>Please select Jewelno for Excel Process.</value>
+  </data>
+  <data name="frmBarCodeOrder_btnProcess_Click_Please_enter_Customer_Name_for_Excel_Process_" xml:space="preserve">
+    <value>Please enter Customer Name for Excel Process.</value>
+  </data>
+  <data name="frmAllCatalogueProduct_btnProcess_Click_Please_select_Jewelno_for_Excel_Process_" xml:space="preserve">
+    <value>Please select Jewelno for Excel Process.</value>
+  </data>
+  <data name="frmCatalogue_btnProcess_Click_Jewel_Order_Report" xml:space="preserve">
+    <value>Jewel Order Report</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_dgvJewel_CellContentClick_" xml:space="preserve">
+    <value>Total Jewel(s) on Selected Page = </value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_btnDeselectAll_Click_It_is_already_deselected" xml:space="preserve">
+    <value>It is already deselected</value>
+  </data>
+  <data name="frmBarCodeOrder_FindJewel_Records_Not_found__" xml:space="preserve">
+    <value>Records Not found !</value>
+  </data>
+  <data name="frmProduct_FillGrid_Records_Not_found__" xml:space="preserve">
+    <value>Records Not found !</value>
+  </data>
+  <data name="BaseFormControl_CloseOrderForm_Are_you_sure_want_to_cancel_order_" xml:space="preserve">
+    <value>Are you sure want to cancel order?</value>
+  </data>
+  <data name="BaseFormControl_CellMouseMove_Click_here_for_Thumbnails" xml:space="preserve">
+    <value>Click here for Thumbnails</value>
+  </data>
+  <data name="frmAdvancesearch_button2_Click_Please_enter_valid_range_of_Weight__" xml:space="preserve">
+    <value>Please enter valid range of Weight !</value>
+  </data>
+  <data name="frmAllCatalogueProduct_frmAllCatalogueProduct_Load_Record_s__Not_found__" xml:space="preserve">
+    <value>Record(s) Not found !</value>
+  </data>
+  <data name="frmAllCatalogueProduct_frmAllCatalogueProduct_Load_" xml:space="preserve">
+    <value>Total Product(s) on Selected Page = </value>
+  </data>
+  <data name="frmAllCatalogueProduct_btnDeselectAll_Click_It_is_already_deselected" xml:space="preserve">
+    <value>It is already deselected</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_cmbPageNos_SelectedIndexChanged_No_such_PageNo_eixsts__Please_select_different_Page_No" xml:space="preserve">
+    <value>No such PageNo eixsts! Please select different Page No</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_FillGrid_Records_Not_found__" xml:space="preserve">
+    <value>Records Not found !</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_btnNext_Click_This_is_the_Last_Page_" xml:space="preserve">
+    <value>This is the Last Page!</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_btnPrevious_Click_This_is_the_First_Page_" xml:space="preserve">
+    <value>This is the First Page!</value>
+  </data>
+  <data name="frmAllJewelsBarcodePrint_btnGenerateBarcode_Click_No_Jewel_selected_for_report_" xml:space="preserve">
+    <value>No Jewel selected for report!</value>
+  </data>
+  <data name="frmBarCodeOrder_FindJewel__already_exists_Please_search_for_new_record_" xml:space="preserve">
+    <value> already exists!Please search for new record </value>
+  </data>
+  <data name="frmCatalogue_SelectWeight_Please_enter_valid_range_of_Weight_and_select_Jewel_Description_" xml:space="preserve">
+    <value>Please enter valid range of Weight and select Jewel Description!</value>
+  </data>
+  <data name="frmCatalogue_SelectWeight_Please_select_atleast_one_Jewel_Description" xml:space="preserve">
+    <value>Please select atleast one Jewel Description</value>
+  </data>
+  <data name="frmCatalogue_btnProcess_Click_No_Records_to_Process_" xml:space="preserve">
+    <value>No Records to Process.</value>
+  </data>
+  <data name="frmCatalogue_btnProcess_Click_Please_enter_Customer_Name_for_Excel_Process_" xml:space="preserve">
+    <value>Please enter Customer Name for Excel Process.</value>
+  </data>
+  <data name="frmDataEntry_frmDataEntry_FormClosing_You_haven_t_saved_your_data_" xml:space="preserve">
+    <value>You haven't saved your data.</value>
+  </data>
+  <data name="frmDataEntry_frmDataEntry_FormClosing_Are_you_sure_you_want_to_Exit_" xml:space="preserve">
+    <value>Are you sure you want to Exit?</value>
+  </data>
+  <data name="frmJewelMaster_BindForm_All_Graphics_Types___jpg__JPG___jpg_" xml:space="preserve">
+    <value>All Graphics Types|*.jpg;|JPG|*.jpg;</value>
+  </data>
+  <data name="frmJewelMaster_btnSave_Click_Please_select_file_to_upload_" xml:space="preserve">
+    <value>Please select file to upload.</value>
+  </data>
+  <data name="frmJewelMaster_btnSave_Click_Please_select_proper_dia_Wt_" xml:space="preserve">
+    <value>Please select proper dia Wt.</value>
+  </data>
+  <data name="frmJewelMaster_btnSave_Click_Please_select_proper_net_Wt_" xml:space="preserve">
+    <value>Please select proper net Wt.</value>
+  </data>
+  <data name="frmMDIParent_manageJewelsToolStripMenuItem_Click_Image_Directory_path_not_set____please_click_ok_to_set_it_now_" xml:space="preserve">
+    <value>Image Directory path not set !, please click ok to set it now.</value>
+  </data>
+  <data name="frmMDIParent__terminate_Are_you_sure_want_to_exit__" xml:space="preserve">
+    <value>Are you sure want to exit ?</value>
+  </data>
+  <data name="frmMDIParent__terminate_Exit_Application" xml:space="preserve">
+    <value>Exit Application</value>
+  </data>
+  <data name="frmMDIParent_frmMDIParent_Load_Image_Directory_path_not_set____please_set_it_from_Tools____App_Settings__" xml:space="preserve">
+    <value>Image Directory path not set !, please set it from Tools -&gt; App Settings !</value>
+  </data>
+  <data name="frmMDIParent_deleteToolStripButton_Click_Are_you_sure_want_to_delete_jewel_record_" xml:space="preserve">
+    <value>Are you sure want to delete jewel record.</value>
+  </data>
+  <data name="frmProduct_cmbPageNos_SelectedIndexChanged_No_such_PageNo_eixsts__Please_select_different_Page_No" xml:space="preserve">
+    <value>No such PageNo eixsts! Please select different Page No</value>
+  </data>
+  <data name="frmProduct_FillGrid_" xml:space="preserve">
+    <value>Total Product(s) on Selected Page = </value>
+  </data>
+  <data name="frmProduct_dgvJewel_CellContentClick_Record_already_exists_" xml:space="preserve">
+    <value>Record already exists!</value>
+  </data>
+  <data name="frmProduct_btnNext_Click_This_is_the_Last_Page_" xml:space="preserve">
+    <value>This is the Last Page!</value>
+  </data>
+  <data name="frmProduct_btnPrevious_Click_This_is_the_First_Page_" xml:space="preserve">
+    <value>This is the First Page!</value>
+  </data>
+  <data name="frmJewelMaster_btnSave_Click_Please_select_proper_grs_Wt_" xml:space="preserve">
+    <value>Please select proper grs Wt.</value>
+  </data>
+  <data name="frmSettings_btnSave_Click_Please_enter_proper_folder_path" xml:space="preserve">
+    <value>Please enter proper folder path</value>
+  </data>
+  <data name="frmSettings_btnSave_Click_Error___Folder_Path_Not_Found" xml:space="preserve">
+    <value>Error - Folder Path Not Found</value>
+  </data>
+  <data name="Program_Main_Connection_could_not_be_established__please_check_connection_file_" xml:space="preserve">
+    <value>Connection could not be established, please check connection file.</value>
+  </data>
+  <data name="Program_Main_Your_software_demo_period_is_over__Please_contact_vendor" xml:space="preserve">
+    <value>Your software demo period is over, Please contact vendor</value>
+  </data>
+</root>

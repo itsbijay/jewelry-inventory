@@ -1,0 +1,134 @@
+<# 
+// Entity Framework T4 include template for Microsoft Entity Designer SQL script generation.
+// Copyright (c) 2010 Devart. All rights reserved.
+#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Entity.Design" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data.Entity.Design" #>
+<#@ import namespace="System.Data.Metadata.Edm" #>
+<#@ import namespace="Microsoft.Data.Entity.Design.DatabaseGeneration" #>
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ include file="Devart SSDLToSQL.ttinclude"#>
+<#+
+	#region MySqlVendor
+
+	public class MySqlVendor : SqlVendor {
+
+		public MySqlVendor() {
+
+			ForeignKeysSupported = true;
+			DatabaseSchemasSupported = true;
+			OnDeleteSupported = true;
+			OnUpdateSupported = true;
+			IdentifierMaxLength = 64;
+		}
+	}
+
+	#endregion
+
+	#region MySqlGenerator
+
+	public class MySqlGenerator : SqlScriptGenerator {
+
+		public MySqlGenerator(TextTransformation writer, GeneratorOptions options)
+			: base (writer, options) {
+		}
+
+		protected override SqlVendor CreateVendor() {
+
+			return new MySqlVendor();
+		}
+
+		public override string Quote(string identifier) {
+
+			return String.Format("`{0}`", identifier);
+		}
+
+		public override void ScriptStartBlock() {
+#>
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS = @@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS = 0 */;
+
+<#+
+			TransformText();
+		}
+
+		public override void ScriptFinishBlock() {
+#>
+
+/*!40014 SET FOREIGN_KEY_CHECKS = @OLD_FOREIGN_KEY_CHECKS */;
+<#+
+			TransformText();
+		}
+
+		public override void SetCurrentDatabase(string databaseName) {
+#>
+USE  <#= Quote(GetValidIdentifier(databaseName)) #>
+<#+
+			TransformText();
+		}
+
+		public override void CreateSchema(string schemaName) {
+#>
+CREATE DATABASE IF NOT EXISTS <#= Quote(GetValidIdentifier(schemaName)) #>;
+<#+
+			TransformText();
+		}
+
+		protected override void WriteDropTable(string identifier) {
+
+#>
+DROP TABLE IF EXISTS <#= identifier #>;
+<#+
+		}
+
+		protected override string GetCreateTableOptions() {
+
+			return " ENGINE = INNODB";
+		}
+
+		protected override string GetDropForeignKeyString() {
+
+			return "DROP FOREIGN KEY";
+		}
+
+		protected override string GetDbType(EdmProperty property) {
+
+			string ssdlType = property.ToStoreType();
+			switch (ssdlType) {
+				case "boolean":
+					return "bit(1)";
+				case "sbyte":
+					return "tinyint";
+				case "tinyint":
+					return "tinyint unsigned";
+				case "varchar(65535)":
+					return "varchar(4000)";
+				case "guid":
+					return "char(36)";
+				default:
+					return ssdlType;
+			}
+		}
+
+		protected override string GetColumnTrailer(EdmProperty property) {
+
+			if (property.GetStoreGeneratedPatternValue(TargetVersion, DataSpace.SSpace) != StoreGeneratedPattern.Identity)
+				return String.Empty;
+
+			string dataType = property.ToStoreType().ToLower();
+			if (dataType.Contains("int"))
+				return "AUTO_INCREMENT UNIQUE";
+
+			return String.Empty;
+		}
+
+	}
+
+	#endregion
+#>

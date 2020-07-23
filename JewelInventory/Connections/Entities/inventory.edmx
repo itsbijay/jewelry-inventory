@@ -1,0 +1,1366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="inventory.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="inventoryStoreContainer">
+    <EntitySet Name="Addresses" EntityType="inventory.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="inventory.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginInformations" EntityType="inventory.Store.LoginInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Suppliers" EntityType="inventory.Store.Suppliers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="inventory.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductMasters" EntityType="inventory.Store.ProductMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConfigurationMasters" EntityType="inventory.Store.ConfigurationMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JewelTransactions" EntityType="inventory.Store.JewelTransactions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CostingDetails" EntityType="inventory.Store.CostingDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JewelStockLedgers" EntityType="inventory.Store.JewelStockLedgers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FinancialYearMasters" EntityType="inventory.Store.FinancialYearMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionLookups" EntityType="inventory.Store.TransactionLookups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JewelMasters" EntityType="inventory.Store.JewelMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TraceLogs" EntityType="inventory.Store.TraceLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LooseDiamondTransactions" EntityType="inventory.Store.LooseDiamondTransactions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionInvoices" EntityType="inventory.Store.TransactionInvoices" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccountLedgers" EntityType="inventory.Store.AccountLedgers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FirmMasters" EntityType="inventory.Store.FirmMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CreditNotes" EntityType="inventory.Store.CreditNotes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LooseDiamondLookups" EntityType="inventory.Store.LooseDiamondLookups" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserLoginInformation" Association="inventory.Store.UserLoginInformation">
+      <End Role="User" EntitySet="Users" />
+      <End Role="LoginInformation" EntitySet="LoginInformations" />
+    </AssociationSet>
+    <AssociationSet Name="AddressCustomer" Association="inventory.Store.AddressCustomer">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="AddressSupplier" Association="inventory.Store.AddressSupplier">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="AddressUser" Association="inventory.Store.AddressUser">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="PurchaseTransactionCostingRate" Association="inventory.Store.PurchaseTransactionCostingRate">
+      <End Role="PurchaseTransaction" EntitySet="JewelTransactions" />
+      <End Role="CostingRate" EntitySet="CostingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="TransactionLookupJewelTransaction" Association="inventory.Store.TransactionLookupJewelTransaction">
+      <End Role="TransactionLookup" EntitySet="TransactionLookups" />
+      <End Role="JewelTransaction" EntitySet="JewelTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="LooseDiamondLookupLooseDiamondTransaction" Association="inventory.Store.LooseDiamondLookupLooseDiamondTransaction">
+      <End Role="LooseDiamondLookup" EntitySet="LooseDiamondLookups" />
+      <End Role="LooseDiamondTransaction" EntitySet="LooseDiamondTransactions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddressLine1" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="AddressLine2" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PostalCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Fax" Type="nvarchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomersId" />
+    </Key>
+    <Property Name="CustomersId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomersCode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ContactName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CustomesStatus_Enum" Type="smallint" Nullable="false" />
+    <Property Name="CustomerProperties_Xml" Type="varchar(max)" Nullable="false" />
+    <Property Name="VATNumber" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="CSTNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PANNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="Address_AddressId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginInformations">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UserType_Enum" Type="smallint" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierCode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ContactName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="SupplierStatus_Enum" Type="smallint" Nullable="false" />
+    <Property Name="SupplierProperties_Xml" Type="varchar(max)" Nullable="false" />
+    <Property Name="VATNumber" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="PANNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CSTNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="Address_AddressId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserStatus_Enum" Type="smallint" Nullable="false" />
+    <Property Name="UserProperties_Xml" Type="varchar(max)" Nullable="false" />
+    <Property Name="UserImageId" Type="int" Nullable="true" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="true" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="LoginInformations_LoginId" Type="int" Nullable="false" />
+    <Property Name="Address_AddressId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductMasters">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConfigurationMasters">
+    <Key>
+      <PropertyRef Name="ConfigurationId" />
+    </Key>
+    <Property Name="ConfigurationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Particulars" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ConfigurationValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductCategory_Enum" Type="smallint" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="JewelItemCategory_Enum" Type="smallint" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JewelTransactions">
+    <Key>
+      <PropertyRef Name="JewelTransactionId" />
+    </Key>
+    <Property Name="JewelTransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="CertificateNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="JewelType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JewelNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DesignCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TotalWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="MetalWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="MetalColor" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StoneWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="StonePcs" Type="int" Nullable="false" />
+    <Property Name="CStoneWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="CStonePcs" Type="int" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="TransactionDetails_Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionType_Enum" Type="smallint" Nullable="false" />
+    <Property Name="TransactionPartyRef" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="JewelItemCategory_Enum" Type="smallint" Nullable="false" />
+    <Property Name="KT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedTransactionBy" Type="int" Nullable="true" />
+    <Property Name="CostingDetail_CostingDetailId" Type="int" Nullable="true" />
+    <Property Name="TransactionLookup_TransactionLookupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CostingDetails">
+    <Key>
+      <PropertyRef Name="CostingDetailId" />
+    </Key>
+    <Property Name="CostingDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CostingRates_Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JewelStockLedgers">
+    <Key>
+      <PropertyRef Name="JewelStockMasterId" />
+    </Key>
+    <Property Name="JewelStockMasterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JewelNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="DesignCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JewelItemCategory_Enum" Type="smallint" Nullable="false" />
+    <Property Name="JewelType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MetalWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="MetalColor" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="JewelState_Enum" Type="smallint" Nullable="false" />
+    <Property Name="StoneWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="StonePcs" Type="int" Nullable="false" />
+    <Property Name="CStoneWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="CStonePcs" Type="int" Nullable="false" />
+    <Property Name="KT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TotalWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="CertificateNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StockStatus_Enum" Type="smallint" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FinancialYearMasters">
+    <Key>
+      <PropertyRef Name="FinancialYearMasterId" />
+    </Key>
+    <Property Name="FinancialYearMasterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateFrom" Type="datetime" Nullable="false" />
+    <Property Name="DateTo" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsCancelled" Type="bit" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionLookups">
+    <Key>
+      <PropertyRef Name="TransactionLookupId" />
+    </Key>
+    <Property Name="TransactionLookupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="ContactName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DocNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TransactionType_Enum" Type="smallint" Nullable="false" />
+    <Property Name="NetAmount" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="TransactionPartyRef" Type="varchar(max)" Nullable="false" />
+    <Property Name="MemoNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="FinancialYearCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionLookupDetail_Xml" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JewelMasters">
+    <Key>
+      <PropertyRef Name="JewelId" />
+    </Key>
+    <Property Name="JewelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JewelNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StyleNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JewelDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MetalColor" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DiamondPcs" Type="int" Nullable="true" />
+    <Property Name="DiamondWt" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="CStoneWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="CStonePcs" Type="int" Nullable="false" />
+    <Property Name="GrsWt" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="NetWt" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="true" />
+    <Property Name="AccessedBy" Type="int" Nullable="true" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TraceLogs">
+    <Key>
+      <PropertyRef Name="TraceLogId" />
+    </Key>
+    <Property Name="TraceLogId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TraceLogDate" Type="datetime" Nullable="false" />
+    <Property Name="LogGuid" Type="varchar(max)" Nullable="true" />
+    <Property Name="LogDateTime" Type="varchar(max)" Nullable="true" />
+    <Property Name="Level" Type="varchar(max)" Nullable="true" />
+    <Property Name="MachineName" Type="varchar(max)" Nullable="true" />
+    <Property Name="Class" Type="varchar(max)" Nullable="true" />
+    <Property Name="Message" Type="varchar(max)" Nullable="true" />
+    <Property Name="Exception" Type="varchar(max)" Nullable="true" />
+    <Property Name="GCTotalMemory" Type="bigint" Nullable="true" />
+    <Property Name="GCGen0Count" Type="int" Nullable="true" />
+    <Property Name="GCGen1Count" Type="int" Nullable="true" />
+    <Property Name="GCGen2Count" Type="int" Nullable="true" />
+    <Property Name="GCMaxGen" Type="int" Nullable="true" />
+    <Property Name="ProcessId" Type="int" Nullable="true" />
+    <Property Name="Identity" Type="varchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="LooseDiamondTransactions">
+    <Key>
+      <PropertyRef Name="LooseDiamondTransactionId" />
+    </Key>
+    <Property Name="LooseDiamondTransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SieveSize" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="DiamondWeight" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="Quality" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="LooseDiamondType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionType_Enum" Type="smallint" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="LooseDiamondLookup_LooseDiamondLookupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionInvoices">
+    <Key>
+      <PropertyRef Name="TransactionInvoiceId" />
+    </Key>
+    <Property Name="TransactionInvoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+    <Property Name="NetAmount" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="OtherCharges" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="Tax" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="TransactionPartyRef" Type="varchar(max)" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PaymentTerm" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="Cancelled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountLedgers">
+    <Key>
+      <PropertyRef Name="TransactionInvoicesId" />
+    </Key>
+    <Property Name="TransactionInvoicesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionLookupKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="NetAmount" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="OtherCharges" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="Tax" Type="decimal" Nullable="false" Precision="18" Scale="4" />
+    <Property Name="TransactionPartyRef" Type="varchar(max)" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FirmMasters">
+    <Key>
+      <PropertyRef Name="FirmMasterId" />
+    </Key>
+    <Property Name="FirmMasterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirmEmail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirmTopHeader" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FirmHeader" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirmWebsite" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirmLogo" Type="varbinary(max)" Nullable="true" />
+    <Property Name="FirmVATNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FirmTINNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FirmAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirmAdditionalInfo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tax" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="OtherTax" Type="decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+    <Property Name="SyncCatalogData" Type="bit" Nullable="true" DefaultValue="false" />
+  </EntityType>
+  <EntityType Name="CreditNotes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LooseDiamondLookups">
+    <Key>
+      <PropertyRef Name="LooseDiamondLookupId" />
+    </Key>
+    <Property Name="LooseDiamondLookupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FinancialYearCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+    <Property Name="ContactName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DocNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TransactionPartyRef" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TransactionType_Enum" Type="smallint" Nullable="false" />
+    <Property Name="AccessedDate" Type="datetime" Nullable="false" />
+    <Property Name="AccessedBy" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UserLoginInformation">
+    <End Role="User" Type="inventory.Store.Users" Multiplicity="*" />
+    <End Role="LoginInformation" Type="inventory.Store.LoginInformations" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="LoginInformation">
+        <PropertyRef Name="LoginId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="LoginInformations_LoginId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressCustomer">
+    <End Role="Address" Type="inventory.Store.Addresses" Multiplicity="1" />
+    <End Role="Customer" Type="inventory.Store.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Address_AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressSupplier">
+    <End Role="Address" Type="inventory.Store.Addresses" Multiplicity="1" />
+    <End Role="Supplier" Type="inventory.Store.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="Address_AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressUser">
+    <End Role="Address" Type="inventory.Store.Addresses" Multiplicity="1" />
+    <End Role="User" Type="inventory.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Address_AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PurchaseTransactionCostingRate">
+    <End Role="PurchaseTransaction" Type="inventory.Store.JewelTransactions" Multiplicity="*" />
+    <End Role="CostingRate" Type="inventory.Store.CostingDetails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CostingRate">
+        <PropertyRef Name="CostingDetailId" />
+      </Principal>
+      <Dependent Role="PurchaseTransaction">
+        <PropertyRef Name="CostingDetail_CostingDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TransactionLookupJewelTransaction">
+    <End Role="TransactionLookup" Type="inventory.Store.TransactionLookups" Multiplicity="1" />
+    <End Role="JewelTransaction" Type="inventory.Store.JewelTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionLookup">
+        <PropertyRef Name="TransactionLookupId" />
+      </Principal>
+      <Dependent Role="JewelTransaction">
+        <PropertyRef Name="TransactionLookup_TransactionLookupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LooseDiamondLookupLooseDiamondTransaction">
+    <End Role="LooseDiamondLookup" Type="inventory.Store.LooseDiamondLookups" Multiplicity="1" />
+    <End Role="LooseDiamondTransaction" Type="inventory.Store.LooseDiamondTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LooseDiamondLookup">
+        <PropertyRef Name="LooseDiamondLookupId" />
+      </Principal>
+      <Dependent Role="LooseDiamondTransaction">
+        <PropertyRef Name="LooseDiamondLookup_LooseDiamondLookupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="inventory" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="inventoryContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="inventory.Address" />
+          <EntitySet Name="Customers" EntityType="inventory.Customer" />
+          <EntitySet Name="LoginInformations" EntityType="inventory.LoginInformation" />
+          <EntitySet Name="Suppliers" EntityType="inventory.Supplier" />
+          <EntitySet Name="Users" EntityType="inventory.User" />
+          <EntitySet Name="ProductMasters" EntityType="inventory.ProductMaster" />
+          <AssociationSet Name="UserLoginInformation" Association="inventory.UserLoginInformation">
+            <End Role="User" EntitySet="Users" />
+            <End Role="LoginInformation" EntitySet="LoginInformations" />
+          </AssociationSet>
+          <AssociationSet Name="AddressCustomer" Association="inventory.AddressCustomer">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="AddressSupplier" Association="inventory.AddressSupplier">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Supplier" EntitySet="Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="AddressUser" Association="inventory.AddressUser">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="ConfigurationMasters" EntityType="inventory.ConfigurationMaster" />
+          <EntitySet Name="JewelTransactions" EntityType="inventory.JewelTransaction" />
+          <EntitySet Name="CostingDetails" EntityType="inventory.CostingDetail" />
+          <AssociationSet Name="PurchaseTransactionCostingRate" Association="inventory.PurchaseTransactionCostingRate">
+            <End Role="PurchaseTransaction" EntitySet="JewelTransactions" />
+            <End Role="CostingRate" EntitySet="CostingDetails" />
+          </AssociationSet>
+          <EntitySet Name="JewelStockLedgers" EntityType="inventory.JewelStockLedger" />
+          <EntitySet Name="FinancialYearMasters" EntityType="inventory.FinancialYearMaster" />
+          <EntitySet Name="TransactionLookups" EntityType="inventory.TransactionLookup" />
+          <EntitySet Name="JewelMasters" EntityType="inventory.JewelMaster" />
+          <EntitySet Name="TraceLogs" EntityType="inventory.TraceLog" />
+          <EntitySet Name="LooseDiamondTransactions" EntityType="inventory.LooseDiamondTransaction" />
+          <EntitySet Name="TransactionInvoices" EntityType="inventory.TransactionInvoices" />
+          <EntitySet Name="AccountLedgers" EntityType="inventory.AccountLedger" />
+          <AssociationSet Name="TransactionLookupJewelTransaction" Association="inventory.TransactionLookupJewelTransaction">
+            <End Role="TransactionLookup" EntitySet="TransactionLookups" />
+            <End Role="JewelTransaction" EntitySet="JewelTransactions" />
+          </AssociationSet>
+          <EntitySet Name="FirmMasters" EntityType="inventory.FirmMaster" />
+          <EntitySet Name="CreditNotes" EntityType="inventory.CreditNote" />
+          <EntitySet Name="LooseDiamondLookups" EntityType="inventory.LooseDiamondLookup" />
+          <AssociationSet Name="LooseDiamondLookupLooseDiamondTransaction" Association="inventory.LooseDiamondLookupLooseDiamondTransaction">
+            <End Role="LooseDiamondLookup" EntitySet="LooseDiamondLookups" />
+            <End Role="LooseDiamondTransaction" EntitySet="LooseDiamondTransactions" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Type="Int32" Name="AddressId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AddressLine1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AddressLine2" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostalCode" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="State" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Customers" Relationship="inventory.AddressCustomer" FromRole="Address" ToRole="Customer" />
+          <NavigationProperty Name="Suppliers" Relationship="inventory.AddressSupplier" FromRole="Address" ToRole="Supplier" />
+          <NavigationProperty Name="Users" Relationship="inventory.AddressUser" FromRole="Address" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomersId" />
+          </Key>
+          <Property Type="Int32" Name="CustomersId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CustomersCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="CustomesStatus_Enum" Nullable="false" />
+          <Property Type="String" Name="CustomerProperties_Xml" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VATNumber" Nullable="true" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Address" Relationship="inventory.AddressCustomer" FromRole="Customer" ToRole="Address" />
+          <Property Type="String" Name="CSTNumber" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="PANNumber" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoginInformation">
+          <Key>
+            <PropertyRef Name="LoginId" />
+          </Key>
+          <Property Type="Int32" Name="LoginId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int16" Name="UserType_Enum" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="inventory.UserLoginInformation" FromRole="LoginInformation" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierId" />
+          </Key>
+          <Property Type="Int32" Name="SupplierId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SupplierCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="SupplierStatus_Enum" Nullable="false" />
+          <Property Type="String" Name="SupplierProperties_Xml" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VATNumber" Nullable="true" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Address" Relationship="inventory.AddressSupplier" FromRole="Supplier" ToRole="Address" />
+          <Property Type="String" Name="PANNumber" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="CSTNumber" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="UserStatus_Enum" Nullable="false" />
+          <Property Type="String" Name="UserProperties_Xml" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserImageId" />
+          <Property Type="DateTime" Name="LastLoginDate" Precision="3" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <NavigationProperty Name="LoginInformations" Relationship="inventory.UserLoginInformation" FromRole="User" ToRole="LoginInformation" />
+          <NavigationProperty Name="Address" Relationship="inventory.AddressUser" FromRole="User" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="ProductMaster">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Type="Int32" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+        </EntityType>
+        <Association Name="UserLoginInformation">
+          <End Type="inventory.User" Role="User" Multiplicity="1" />
+          <End Type="inventory.LoginInformation" Role="LoginInformation" Multiplicity="1" />
+        </Association>
+        <Association Name="AddressCustomer">
+          <End Type="inventory.Address" Role="Address" Multiplicity="1" />
+          <End Type="inventory.Customer" Role="Customer" Multiplicity="0..1" />
+        </Association>
+        <Association Name="AddressSupplier">
+          <End Type="inventory.Address" Role="Address" Multiplicity="1" />
+          <End Type="inventory.Supplier" Role="Supplier" Multiplicity="0..1" />
+        </Association>
+        <Association Name="AddressUser">
+          <End Type="inventory.Address" Role="Address" Multiplicity="1" />
+          <End Type="inventory.User" Role="User" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="ConfigurationMaster">
+          <Key>
+            <PropertyRef Name="ConfigurationId" />
+          </Key>
+          <Property Type="Int32" Name="ConfigurationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Particulars" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="ConfigurationValue" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Int16" Name="ProductCategory_Enum" Nullable="false" />
+          <Property Type="String" Name="Remarks" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int16" Name="JewelItemCategory_Enum" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JewelTransaction">
+          <Key>
+            <PropertyRef Name="JewelTransactionId" />
+          </Key>
+          <Property Type="Int32" Name="JewelTransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CostingDetail" Relationship="inventory.PurchaseTransactionCostingRate" FromRole="PurchaseTransaction" ToRole="CostingRate" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CertificateNumber" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Type="String" Name="JewelType" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="JewelNumber" ConcurrencyMode="None" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="DesignCode" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Decimal" Name="TotalWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="MetalWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="MetalColor" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Type="Decimal" Name="StoneWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="StonePcs" Nullable="false" />
+          <Property Type="Decimal" Name="CStoneWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="CStonePcs" Nullable="false" />
+          <Property Type="Decimal" Name="TotalAmount" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="TransactionDetails_Xml" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="TransactionType_Enum" Nullable="false" />
+          <Property Type="String" Name="TransactionPartyRef" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="JewelItemCategory_Enum" Nullable="false" />
+          <Property Type="String" Name="KT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <Property Type="Int32" Name="UpdatedTransactionBy" />
+          <NavigationProperty Name="TransactionLookup" Relationship="inventory.TransactionLookupJewelTransaction" FromRole="JewelTransaction" ToRole="TransactionLookup" />
+          </EntityType>
+        <EntityType Name="CostingDetail">
+          <Key>
+            <PropertyRef Name="CostingDetailId" />
+          </Key>
+          <Property Type="Int32" Name="CostingDetailId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CostingRates_Xml" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PurchaseTransaction" Relationship="inventory.PurchaseTransactionCostingRate" FromRole="CostingRate" ToRole="PurchaseTransaction" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <Association Name="PurchaseTransactionCostingRate">
+          <End Type="inventory.JewelTransaction" Role="PurchaseTransaction" Multiplicity="*" />
+          <End Type="inventory.CostingDetail" Role="CostingRate" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="JewelStockLedger">
+          <Key>
+            <PropertyRef Name="JewelStockMasterId" />
+          </Key>
+          <Property Type="Int32" Name="JewelStockMasterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="JewelNumber" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="DesignCode" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Int16" Name="JewelItemCategory_Enum" Nullable="false" />
+          <Property Type="String" Name="JewelType" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Decimal" Name="MetalWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="MetalColor" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Type="Int16" Name="JewelState_Enum" Nullable="false" />
+          <Property Type="Decimal" Name="StoneWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="StonePcs" Nullable="false" />
+          <Property Type="Decimal" Name="CStoneWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="CStonePcs" Nullable="false" />
+          <Property Type="String" Name="KT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="TotalWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="CertificateNumber" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="Int16" Name="StockStatus_Enum" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FinancialYearMaster">
+          <Key>
+            <PropertyRef Name="FinancialYearMasterId" />
+          </Key>
+          <Property Type="Int32" Name="FinancialYearMasterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="YearCode" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="DateFrom" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DateTo" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Boolean" Name="IsCancelled" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransactionLookup">
+          <Key>
+            <PropertyRef Name="TransactionLookupId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionLookupId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ContactName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DocNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="TransactionType_Enum" Nullable="false" />
+          <Property Type="Decimal" Name="NetAmount" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="TransactionPartyRef" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="MemoNumber" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <NavigationProperty Name="JewelTransactions" Relationship="inventory.TransactionLookupJewelTransaction" FromRole="TransactionLookup" ToRole="JewelTransaction" />
+          <Property Type="String" Name="FinancialYearCode" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransactionLookupDetail_Xml" Nullable="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="JewelMaster">
+          <Key>
+            <PropertyRef Name="JewelId" />
+          </Key>
+          <Property Type="Int32" Name="JewelId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="JewelNo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StyleNo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JewelDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MetalColor" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Type="Int32" Name="DiamondPcs" />
+          <Property Type="Decimal" Name="DiamondWt" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="CStoneWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="CStonePcs" Nullable="false" />
+          <Property Type="Decimal" Name="GrsWt" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="NetWt" Precision="18" Scale="4" />
+          <Property Type="DateTime" Name="AccessedDate" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TraceLog">
+          <Key>
+            <PropertyRef Name="TraceLogId" />
+          </Key>
+          <Property Type="Guid" Name="TraceLogId" Nullable="false" />
+          <Property Type="DateTime" Name="TraceLogDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LogGuid" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LogDateTime" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Level" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MachineName" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Class" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Exception" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="GCTotalMemory" />
+          <Property Type="Int32" Name="GCGen0Count" />
+          <Property Type="Int32" Name="GCGen1Count" />
+          <Property Type="Int32" Name="GCGen2Count" />
+          <Property Type="Int32" Name="GCMaxGen" />
+          <Property Type="Int32" Name="ProcessId" />
+          <Property Type="String" Name="Identity" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LooseDiamondTransaction">
+          <Key>
+            <PropertyRef Name="LooseDiamondTransactionId" />
+          </Key>
+          <Property Type="Int32" Name="LooseDiamondTransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="SieveSize" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="DiamondWeight" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="Quality" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="LooseDiamondType" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Int16" Name="TransactionType_Enum" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <NavigationProperty Name="LooseDiamondLookup" Relationship="inventory.LooseDiamondLookupLooseDiamondTransaction" FromRole="LooseDiamondTransaction" ToRole="LooseDiamondLookup" />
+        </EntityType>
+        <EntityType Name="TransactionInvoices">
+          <Key>
+            <PropertyRef Name="TransactionInvoiceId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionInvoiceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="InvoiceNumber" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="InvoiceDate" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="NetAmount" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="OtherCharges" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="Tax" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="TransactionPartyRef" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remarks" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="PaymentTerm" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <Property Type="Boolean" Name="Cancelled" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AccountLedger">
+          <Key>
+            <PropertyRef Name="TransactionInvoicesId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionInvoicesId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="TransactionLookupKey" Nullable="false" />
+          <Property Type="String" Name="InvoiceNumber" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="NetAmount" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="OtherCharges" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="Tax" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="TransactionPartyRef" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <Association Name="TransactionLookupJewelTransaction">
+          <End Type="inventory.TransactionLookup" Role="TransactionLookup" Multiplicity="1" />
+          <End Type="inventory.JewelTransaction" Role="JewelTransaction" Multiplicity="*" />
+        </Association>
+        <EntityType Name="FirmMaster">
+          <Key>
+            <PropertyRef Name="FirmMasterId" />
+          </Key>
+          <Property Type="Int32" Name="FirmMasterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirmName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmEmail" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmTopHeader" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmHeader" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmWebsite" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="FirmLogo" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="FirmVATNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirmTINNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirmAddress" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmAdditionalInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Tax" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OtherTax" Precision="18" Scale="2" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <Property Type="Boolean" Name="SyncCatalogData" DefaultValue="false" Nullable="true" />
+        </EntityType>
+        <EntityType Name="CreditNote">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" />
+          <Property Type="String" Name="InvoiceNo" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LooseDiamondLookup">
+          <Key>
+            <PropertyRef Name="LooseDiamondLookupId" />
+          </Key>
+          <Property Type="Int32" Name="LooseDiamondLookupId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FinancialYearCode" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TransactionDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ContactName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DocNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransactionPartyRef" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="TransactionType_Enum" Nullable="false" />
+          <Property Type="DateTime" Name="AccessedDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="AccessedBy" Nullable="false" />
+          <NavigationProperty Name="LooseDiamondTransactions" Relationship="inventory.LooseDiamondLookupLooseDiamondTransaction" FromRole="LooseDiamondLookup" ToRole="LooseDiamondTransaction" />
+        </EntityType>
+        <Association Name="LooseDiamondLookupLooseDiamondTransaction">
+          <End Type="inventory.LooseDiamondLookup" Role="LooseDiamondLookup" Multiplicity="1" />
+          <End Type="inventory.LooseDiamondTransaction" Role="LooseDiamondTransaction" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="inventoryStoreContainer" CdmEntityContainer="inventoryContainer">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.Address)">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.Customer)">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomersId" ColumnName="CustomersId" />
+          <ScalarProperty Name="CustomersCode" ColumnName="CustomersCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CustomesStatus_Enum" ColumnName="CustomesStatus_Enum" />
+          <ScalarProperty Name="CustomerProperties_Xml" ColumnName="CustomerProperties_Xml" />
+          <ScalarProperty Name="VATNumber" ColumnName="VATNumber" />
+          <ScalarProperty Name="CSTNumber" ColumnName="CSTNumber" />
+          <ScalarProperty Name="PANNumber" ColumnName="PANNumber" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginInformations">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.LoginInformation)">
+        <MappingFragment StoreEntitySet="LoginInformations">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserType_Enum" ColumnName="UserType_Enum" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.Supplier)">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="SupplierStatus_Enum" ColumnName="SupplierStatus_Enum" />
+          <ScalarProperty Name="SupplierProperties_Xml" ColumnName="SupplierProperties_Xml" />
+          <ScalarProperty Name="VATNumber" ColumnName="VATNumber" />
+          <ScalarProperty Name="PANNumber" ColumnName="PANNumber" />
+          <ScalarProperty Name="CSTNumber" ColumnName="CSTNumber" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserStatus_Enum" ColumnName="UserStatus_Enum" />
+          <ScalarProperty Name="UserProperties_Xml" ColumnName="UserProperties_Xml" />
+          <ScalarProperty Name="UserImageId" ColumnName="UserImageId" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.ProductMaster)">
+        <MappingFragment StoreEntitySet="ProductMasters">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigurationMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.ConfigurationMaster)">
+        <MappingFragment StoreEntitySet="ConfigurationMasters">
+          <ScalarProperty Name="ConfigurationId" ColumnName="ConfigurationId" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="ConfigurationValue" ColumnName="ConfigurationValue" />
+          <ScalarProperty Name="ProductCategory_Enum" ColumnName="ProductCategory_Enum" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="JewelItemCategory_Enum" ColumnName="JewelItemCategory_Enum" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JewelTransactions">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.JewelTransaction)">
+        <MappingFragment StoreEntitySet="JewelTransactions">
+          <ScalarProperty Name="JewelTransactionId" ColumnName="JewelTransactionId" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="CertificateNumber" ColumnName="CertificateNumber" />
+          <ScalarProperty Name="JewelType" ColumnName="JewelType" />
+          <ScalarProperty Name="JewelNumber" ColumnName="JewelNumber" />
+          <ScalarProperty Name="DesignCode" ColumnName="DesignCode" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="MetalWeight" ColumnName="MetalWeight" />
+          <ScalarProperty Name="MetalColor" ColumnName="MetalColor" />
+          <ScalarProperty Name="StoneWeight" ColumnName="StoneWeight" />
+          <ScalarProperty Name="StonePcs" ColumnName="StonePcs" />
+          <ScalarProperty Name="CStoneWeight" ColumnName="CStoneWeight" />
+          <ScalarProperty Name="CStonePcs" ColumnName="CStonePcs" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TransactionDetails_Xml" ColumnName="TransactionDetails_Xml" />
+          <ScalarProperty Name="TransactionType_Enum" ColumnName="TransactionType_Enum" />
+          <ScalarProperty Name="TransactionPartyRef" ColumnName="TransactionPartyRef" />
+          <ScalarProperty Name="JewelItemCategory_Enum" ColumnName="JewelItemCategory_Enum" />
+          <ScalarProperty Name="KT" ColumnName="KT" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+          <ScalarProperty Name="UpdatedTransactionBy" ColumnName="UpdatedTransactionBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostingDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.CostingDetail)">
+        <MappingFragment StoreEntitySet="CostingDetails">
+          <ScalarProperty Name="CostingDetailId" ColumnName="CostingDetailId" />
+          <ScalarProperty Name="CostingRates_Xml" ColumnName="CostingRates_Xml" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JewelStockLedgers">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.JewelStockLedger)">
+        <MappingFragment StoreEntitySet="JewelStockLedgers">
+          <ScalarProperty Name="JewelStockMasterId" ColumnName="JewelStockMasterId" />
+          <ScalarProperty Name="JewelNumber" ColumnName="JewelNumber" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="DesignCode" ColumnName="DesignCode" />
+          <ScalarProperty Name="JewelItemCategory_Enum" ColumnName="JewelItemCategory_Enum" />
+          <ScalarProperty Name="JewelType" ColumnName="JewelType" />
+          <ScalarProperty Name="MetalWeight" ColumnName="MetalWeight" />
+          <ScalarProperty Name="MetalColor" ColumnName="MetalColor" />
+          <ScalarProperty Name="JewelState_Enum" ColumnName="JewelState_Enum" />
+          <ScalarProperty Name="StoneWeight" ColumnName="StoneWeight" />
+          <ScalarProperty Name="StonePcs" ColumnName="StonePcs" />
+          <ScalarProperty Name="CStoneWeight" ColumnName="CStoneWeight" />
+          <ScalarProperty Name="CStonePcs" ColumnName="CStonePcs" />
+          <ScalarProperty Name="KT" ColumnName="KT" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="CertificateNumber" ColumnName="CertificateNumber" />
+          <ScalarProperty Name="StockStatus_Enum" ColumnName="StockStatus_Enum" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinancialYearMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.FinancialYearMaster)">
+        <MappingFragment StoreEntitySet="FinancialYearMasters">
+          <ScalarProperty Name="FinancialYearMasterId" ColumnName="FinancialYearMasterId" />
+          <ScalarProperty Name="YearCode" ColumnName="YearCode" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionLookups">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.TransactionLookup)">
+        <MappingFragment StoreEntitySet="TransactionLookups">
+          <ScalarProperty Name="TransactionLookupId" ColumnName="TransactionLookupId" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TransactionType_Enum" ColumnName="TransactionType_Enum" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="TransactionPartyRef" ColumnName="TransactionPartyRef" />
+          <ScalarProperty Name="MemoNumber" ColumnName="MemoNumber" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+          <ScalarProperty Name="FinancialYearCode" ColumnName="FinancialYearCode" />
+          <ScalarProperty Name="TransactionLookupDetail_Xml" ColumnName="TransactionLookupDetail_Xml" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JewelMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.JewelMaster)">
+        <MappingFragment StoreEntitySet="JewelMasters">
+          <ScalarProperty Name="JewelId" ColumnName="JewelId" />
+          <ScalarProperty Name="JewelNo" ColumnName="JewelNo" />
+          <ScalarProperty Name="StyleNo" ColumnName="StyleNo" />
+          <ScalarProperty Name="JewelDescription" ColumnName="JewelDescription" />
+          <ScalarProperty Name="MetalColor" ColumnName="MetalColor" />
+          <ScalarProperty Name="DiamondPcs" ColumnName="DiamondPcs" />
+          <ScalarProperty Name="DiamondWt" ColumnName="DiamondWt" />
+          <ScalarProperty Name="CStoneWeight" ColumnName="CStoneWeight" />
+          <ScalarProperty Name="CStonePcs" ColumnName="CStonePcs" />
+          <ScalarProperty Name="GrsWt" ColumnName="GrsWt" />
+          <ScalarProperty Name="NetWt" ColumnName="NetWt" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TraceLogs">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.TraceLog)">
+        <MappingFragment StoreEntitySet="TraceLogs">
+          <ScalarProperty Name="TraceLogId" ColumnName="TraceLogId" />
+          <ScalarProperty Name="TraceLogDate" ColumnName="TraceLogDate" />
+          <ScalarProperty Name="LogGuid" ColumnName="LogGuid" />
+          <ScalarProperty Name="LogDateTime" ColumnName="LogDateTime" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="GCTotalMemory" ColumnName="GCTotalMemory" />
+          <ScalarProperty Name="GCGen0Count" ColumnName="GCGen0Count" />
+          <ScalarProperty Name="GCGen1Count" ColumnName="GCGen1Count" />
+          <ScalarProperty Name="GCGen2Count" ColumnName="GCGen2Count" />
+          <ScalarProperty Name="GCMaxGen" ColumnName="GCMaxGen" />
+          <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+          <ScalarProperty Name="Identity" ColumnName="Identity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LooseDiamondTransactions">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.LooseDiamondTransaction)">
+        <MappingFragment StoreEntitySet="LooseDiamondTransactions">
+          <ScalarProperty Name="LooseDiamondTransactionId" ColumnName="LooseDiamondTransactionId" />
+          <ScalarProperty Name="SieveSize" ColumnName="SieveSize" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="DiamondWeight" ColumnName="DiamondWeight" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="LooseDiamondType" ColumnName="LooseDiamondType" />
+          <ScalarProperty Name="TransactionType_Enum" ColumnName="TransactionType_Enum" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionInvoices">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.TransactionInvoices)">
+        <MappingFragment StoreEntitySet="TransactionInvoices">
+          <ScalarProperty Name="TransactionInvoiceId" ColumnName="TransactionInvoiceId" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="OtherCharges" ColumnName="OtherCharges" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="TransactionPartyRef" ColumnName="TransactionPartyRef" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountLedgers">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.AccountLedger)">
+        <MappingFragment StoreEntitySet="AccountLedgers">
+          <ScalarProperty Name="TransactionInvoicesId" ColumnName="TransactionInvoicesId" />
+          <ScalarProperty Name="TransactionLookupKey" ColumnName="TransactionLookupKey" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="OtherCharges" ColumnName="OtherCharges" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="TransactionPartyRef" ColumnName="TransactionPartyRef" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.FirmMaster)">
+        <MappingFragment StoreEntitySet="FirmMasters">
+          <ScalarProperty Name="FirmMasterId" ColumnName="FirmMasterId" />
+          <ScalarProperty Name="FirmName" ColumnName="FirmName" />
+          <ScalarProperty Name="FirmEmail" ColumnName="FirmEmail" />
+          <ScalarProperty Name="FirmTopHeader" ColumnName="FirmTopHeader" />
+          <ScalarProperty Name="FirmHeader" ColumnName="FirmHeader" />
+          <ScalarProperty Name="FirmWebsite" ColumnName="FirmWebsite" />
+          <ScalarProperty Name="FirmLogo" ColumnName="FirmLogo" />
+          <ScalarProperty Name="FirmVATNumber" ColumnName="FirmVATNumber" />
+          <ScalarProperty Name="FirmTINNumber" ColumnName="FirmTINNumber" />
+          <ScalarProperty Name="FirmAddress" ColumnName="FirmAddress" />
+          <ScalarProperty Name="FirmAdditionalInfo" ColumnName="FirmAdditionalInfo" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="OtherTax" ColumnName="OtherTax" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+          <ScalarProperty Name="SyncCatalogData" ColumnName="SyncCatalogData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditNotes">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.CreditNote)">
+        <MappingFragment StoreEntitySet="CreditNotes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LooseDiamondLookups">
+      <EntityTypeMapping TypeName="IsTypeOf(inventory.LooseDiamondLookup)">
+        <MappingFragment StoreEntitySet="LooseDiamondLookups">
+          <ScalarProperty Name="LooseDiamondLookupId" ColumnName="LooseDiamondLookupId" />
+          <ScalarProperty Name="FinancialYearCode" ColumnName="FinancialYearCode" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TransactionPartyRef" ColumnName="TransactionPartyRef" />
+          <ScalarProperty Name="TransactionType_Enum" ColumnName="TransactionType_Enum" />
+          <ScalarProperty Name="AccessedDate" ColumnName="AccessedDate" />
+          <ScalarProperty Name="AccessedBy" ColumnName="AccessedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserLoginInformation" TypeName="inventory.UserLoginInformation" StoreEntitySet="Users">
+      <EndProperty Name="LoginInformation">
+        <ScalarProperty Name="LoginId" ColumnName="LoginInformations_LoginId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressCustomer" TypeName="inventory.AddressCustomer" StoreEntitySet="Customers">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="AddressId" ColumnName="Address_AddressId" />
+      </EndProperty>
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="CustomersId" ColumnName="CustomersId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressSupplier" TypeName="inventory.AddressSupplier" StoreEntitySet="Suppliers">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="AddressId" ColumnName="Address_AddressId" />
+      </EndProperty>
+      <EndProperty Name="Supplier">
+        <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressUser" TypeName="inventory.AddressUser" StoreEntitySet="Users">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="AddressId" ColumnName="Address_AddressId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PurchaseTransactionCostingRate" TypeName="inventory.PurchaseTransactionCostingRate" StoreEntitySet="JewelTransactions">
+      <EndProperty Name="CostingRate">
+        <ScalarProperty Name="CostingDetailId" ColumnName="CostingDetail_CostingDetailId" />
+      </EndProperty>
+      <EndProperty Name="PurchaseTransaction">
+        <ScalarProperty Name="JewelTransactionId" ColumnName="JewelTransactionId" />
+      </EndProperty>
+      <Condition ColumnName="CostingDetail_CostingDetailId" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TransactionLookupJewelTransaction" TypeName="inventory.TransactionLookupJewelTransaction" StoreEntitySet="JewelTransactions">
+      <EndProperty Name="TransactionLookup">
+        <ScalarProperty Name="TransactionLookupId" ColumnName="TransactionLookup_TransactionLookupId" />
+      </EndProperty>
+      <EndProperty Name="JewelTransaction">
+        <ScalarProperty Name="JewelTransactionId" ColumnName="JewelTransactionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LooseDiamondLookupLooseDiamondTransaction" TypeName="inventory.LooseDiamondLookupLooseDiamondTransaction" StoreEntitySet="LooseDiamondTransactions">
+      <EndProperty Name="LooseDiamondLookup">
+        <ScalarProperty Name="LooseDiamondLookupId" ColumnName="LooseDiamondLookup_LooseDiamondLookupId" />
+      </EndProperty>
+      <EndProperty Name="LooseDiamondTransaction">
+        <ScalarProperty Name="LooseDiamondTransactionId" ColumnName="LooseDiamondTransactionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="inventory" ZoomLevel="72" >
+        <EntityTypeShape EntityType="inventory.Address" Width="1.875" PointX="0.5" PointY="4.875" Height="2.7778429430723186" />
+        <EntityTypeShape EntityType="inventory.Customer" Width="2" PointX="6.5" PointY="8.75" Height="2.5783902994791656" />
+        <EntityTypeShape EntityType="inventory.LoginInformation" Width="2" PointX="3.375" PointY="2.125" Height="2.2496956380208339" />
+        <EntityTypeShape EntityType="inventory.Supplier" Width="1.875" PointX="3.375" PointY="6.875" Height="2.5783902994791656" />
+        <EntityTypeShape EntityType="inventory.User" Width="2" PointX="6.25" PointY="4.875" Height="2.4663805506626755" />
+        <EntityTypeShape EntityType="inventory.ProductMaster" Width="1.875" PointX="5.875" PointY="0.75" Height="1.427958984375" />
+        <AssociationConnector Association="inventory.UserLoginInformation">
+          <ConnectorPoint PointX="6.25" PointY="5.56985860188802" />
+          <ConnectorPoint PointX="5.34375" PointY="5.56985860188802" />
+          <ConnectorPoint PointX="5.34375" PointY="4.3746956380208335" />
+        </AssociationConnector>
+        <AssociationConnector Association="inventory.AddressCustomer">
+          <ConnectorPoint PointX="1.4375" PointY="7.7820849609375" />
+          <ConnectorPoint PointX="1.4375" PointY="10" />
+          <ConnectorPoint PointX="3.375" PointY="10" />
+          <ConnectorPoint PointX="3.375" PointY="10.20354248046875" />
+          <ConnectorPoint PointX="6.5" PointY="10.20354248046875" />
+        </AssociationConnector>
+        <AssociationConnector Association="inventory.AddressSupplier">
+          <ConnectorPoint PointX="2.375" PointY="7.3285424804687507" />
+          <ConnectorPoint PointX="3.375" PointY="7.3285424804687507" />
+        </AssociationConnector>
+        <AssociationConnector Association="inventory.AddressUser">
+          <ConnectorPoint PointX="2.375" PointY="5.15992930094401" />
+          <ConnectorPoint PointX="5.260416666666667" PointY="5.1599293009440093" />
+          <ConnectorPoint PointX="5.427083333333333" PointY="5.15992930094401" />
+          <ConnectorPoint PointX="6.25" PointY="5.15992930094401" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="inventory.ConfigurationMaster" Width="2.125" PointX="8.75" PointY="0.875" Height="2.085348307291667" />
+        <EntityTypeShape EntityType="inventory.JewelTransaction" Width="2.75" PointX="0.5" PointY="13" Height="5.043600260416671" />
+        <EntityTypeShape EntityType="inventory.CostingDetail" Width="2.625" PointX="0.5" PointY="10.25" Height="1.9210009765624996" />
+        <AssociationConnector Association="inventory.PurchaseTransactionCostingRate">
+          <ConnectorPoint PointX="1.8125" PointY="13" />
+          <ConnectorPoint PointX="1.8125" PointY="12.006653645833332" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="inventory.JewelStockLedger" Width="2.25" PointX="3.75" PointY="10.25" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="inventory.FinancialYearMaster" Width="2" PointX="6.5" PointY="12.25" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="inventory.TransactionLookup" Width="2" PointX="3.75" PointY="15.875" Height="3.7109993489583353" />
+        <EntityTypeShape EntityType="inventory.JewelMaster" Width="1.875" PointX="8.75" PointY="3.875" Height="3.7109993489583326" />
+        <EntityTypeShape EntityType="inventory.TraceLog" Width="1.875" PointX="10.125" PointY="11.125" Height="3.5644742838541656" />
+        <EntityTypeShape EntityType="inventory.LooseDiamondTransaction" Width="2.375" PointX="13.875" PointY="4.125" Height="3.2357796223958326" />
+        <EntityTypeShape EntityType="inventory.TransactionInvoices" Width="2.125" PointX="6.5" PointY="15.5" Height="2.7427376302083353" />
+        <EntityTypeShape EntityType="inventory.AccountLedger" Width="2.625" PointX="9.125" PointY="7.75" Height="2.5783902994791674" />
+        <AssociationConnector Association="inventory.TransactionLookupJewelTransaction" >
+          <ConnectorPoint PointX="3.75" PointY="17.254506835937498" />
+          <ConnectorPoint PointX="3.25" PointY="17.254506835937498" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="inventory.FirmMaster" Width="1.75" PointX="1.625" PointY="18.875" />
+        <EntityTypeShape EntityType="inventory.CreditNote" Width="2" PointX="9.75" PointY="15.75" Height="1.9210009765625031" />
+        <EntityTypeShape EntityType="inventory.LooseDiamondLookup" Width="2.125" PointX="11.25" PointY="4.125" />
+        <AssociationConnector Association="inventory.LooseDiamondLookupLooseDiamondTransaction" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,10 @@
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\bin\JetCoders.Shared.dll
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\bin\JetCoders.Shared.pdb
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Debug\ResolveAssemblyReference.cache
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Debug\JetCoders.Shared.dll
+D:\Jetcoders\tirth_billing\Lib\JetCoders.Shared\obj\Debug\JetCoders.Shared.pdb
+C:\Git\itsbijay\jet\JewelInventory 2010\Lib\JetCoders.Shared\bin\JetCoders.Shared.dll
+C:\Git\itsbijay\jet\JewelInventory 2010\Lib\JetCoders.Shared\bin\JetCoders.Shared.pdb
+C:\Git\itsbijay\jet\JewelInventory 2010\Lib\JetCoders.Shared\obj\Debug\JetCoders.Shared.csprojAssemblyReference.cache
+C:\Git\itsbijay\jet\JewelInventory 2010\Lib\JetCoders.Shared\obj\Debug\JetCoders.Shared.dll
+C:\Git\itsbijay\jet\JewelInventory 2010\Lib\JetCoders.Shared\obj\Debug\JetCoders.Shared.pdb
