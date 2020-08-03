@@ -1,4 +1,4 @@
-# jewelinventory
+# jewelry inventory
 
 Windows desktop app for jewels stocks and inventory management. It has a dependencies on crystal report, netfx 4.0 & sql server.
 
